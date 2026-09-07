@@ -1,0 +1,1248 @@
+{
+  "meta": {
+    "layer": "skull",
+    "title": "Cranial & Facial Bones",
+    "description": "Bones of the neurocranium and viscerocranium (skull), Phase 1 layer.",
+    "attribution": "3D models: BodyParts3D, (c) The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan."
+  },
+  "bones": {
+    "frontal_bone": {
+      "displayName": "Frontal Bone",
+      "mesh": "frontal_bone.glb",
+      "landmarks": [
+        {
+          "name": "Glabella",
+          "description": "Smooth, rounded elevation on the frontal bone above the root of the nose, between the superciliary arches; a standard craniometric landmark."
+        },
+        {
+          "name": "Superciliary arch",
+          "description": "Ridge of bone above each orbit, deep to the eyebrow, more prominent in males; overlies the frontal air sinus."
+        },
+        {
+          "name": "Supraorbital notch/foramen",
+          "description": "Notch or foramen on the supraorbital margin transmitting the supraorbital nerve and vessels (branches of the ophthalmic division of CN V); important for local anaesthetic blocks of the forehead."
+        },
+        {
+          "name": "Frontal eminence (tuber)",
+          "description": "Rounded prominence on the squamous part of the frontal bone above each superciliary arch, most anterior point of the forehead in youth."
+        },
+        {
+          "name": "Zygomatic process",
+          "description": "Lateral projection of the frontal bone that articulates with the zygomatic bone, forming part of the lateral orbital margin and contributing to the temporal fossa."
+        },
+        {
+          "name": "Supraorbital margin",
+          "description": "Curved upper border of the orbit formed by the frontal bone, separating the orbital and frontal (forehead) surfaces."
+        },
+        {
+          "name": "Frontal sinus",
+          "description": "Paired air-filled cavity within the frontal bone, superomedial to the orbits, draining into the middle nasal meatus via the frontonasal duct."
+        }
+      ]
+    },
+    "parietal_bone_right": {
+      "displayName": "Right Parietal Bone",
+      "mesh": "parietal_bone_right.glb",
+      "landmarks": [
+        {
+          "name": "Parietal eminence (tuber)",
+          "description": "Most convex, prominent point of the parietal bone, marking the centre of ossification and the widest point of the skull."
+        },
+        {
+          "name": "Superior temporal line",
+          "description": "Curved ridge marking the upper attachment of the temporal fascia."
+        },
+        {
+          "name": "Inferior temporal line",
+          "description": "Ridge below the superior temporal line marking the upper attachment of temporalis muscle."
+        },
+        {
+          "name": "Sagittal border",
+          "description": "Serrated medial edge that articulates with its fellow at the sagittal suture."
+        },
+        {
+          "name": "Squamous border",
+          "description": "Bevelled inferior-anterior edge overlapped by the squamous part of the temporal bone."
+        },
+        {
+          "name": "Parietal foramen",
+          "description": "Small, inconstant foramen near the sagittal border posteriorly, transmitting an emissary vein connecting scalp veins to the superior sagittal sinus."
+        }
+      ]
+    },
+    "parietal_bone_left": {
+      "displayName": "Left Parietal Bone",
+      "mesh": "parietal_bone_left.glb",
+      "landmarks": [
+        {
+          "name": "Parietal eminence (tuber)",
+          "description": "Most convex, prominent point of the parietal bone, marking the centre of ossification and the widest point of the skull."
+        },
+        {
+          "name": "Superior temporal line",
+          "description": "Curved ridge marking the upper attachment of the temporal fascia."
+        },
+        {
+          "name": "Inferior temporal line",
+          "description": "Ridge below the superior temporal line marking the upper attachment of temporalis muscle."
+        },
+        {
+          "name": "Sagittal border",
+          "description": "Serrated medial edge that articulates with its fellow at the sagittal suture."
+        },
+        {
+          "name": "Squamous border",
+          "description": "Bevelled inferior-anterior edge overlapped by the squamous part of the temporal bone."
+        },
+        {
+          "name": "Parietal foramen",
+          "description": "Small, inconstant foramen near the sagittal border posteriorly, transmitting an emissary vein connecting scalp veins to the superior sagittal sinus."
+        }
+      ]
+    },
+    "occipital_bone": {
+      "displayName": "Occipital Bone",
+      "mesh": "occipital_bone.glb",
+      "landmarks": [
+        {
+          "name": "External occipital protuberance (inion)",
+          "description": "Palpable midline projection on the external surface, giving attachment to the ligamentum nuchae; a key craniometric point."
+        },
+        {
+          "name": "Superior nuchal line",
+          "description": "Curved line extending laterally from the external occipital protuberance, marking the upper limit of the neck and attachment of trapezius and other muscles."
+        },
+        {
+          "name": "Foramen magnum",
+          "description": "Large opening transmitting the medulla oblongata/spinal cord, vertebral arteries, and spinal roots of the accessory nerve (CN XI)."
+        },
+        {
+          "name": "Occipital condyles",
+          "description": "Paired oval projections either side of the foramen magnum that articulate with the atlas (C1) at the atlanto-occipital joint."
+        },
+        {
+          "name": "Hypoglossal canal",
+          "description": "Canal above and anterior to each occipital condyle transmitting the hypoglossal nerve (CN XII)."
+        },
+        {
+          "name": "Basilar part (clivus)",
+          "description": "Anteriorly projecting portion that fuses with the sphenoid body, supporting the brainstem."
+        }
+      ]
+    },
+    "sphenoid_bone": {
+      "displayName": "Sphenoid Bone",
+      "mesh": "sphenoid_bone.glb",
+      "landmarks": [
+        {
+          "name": "Sella turcica",
+          "description": "Saddle-shaped depression on the superior body housing the pituitary (hypophyseal) fossa, a key radiographic landmark in cephalometrics."
+        },
+        {
+          "name": "Greater wing",
+          "description": "Large lateral projection forming part of the middle cranial fossa, temporal fossa, and infratemporal fossa; pierced by foramen rotundum, ovale, and spinosum."
+        },
+        {
+          "name": "Foramen rotundum",
+          "description": "Foramen in the greater wing transmitting the maxillary nerve (V2) to the pterygopalatine fossa; relevant for maxillary nerve block anaesthesia."
+        },
+        {
+          "name": "Foramen ovale",
+          "description": "Foramen in the greater wing transmitting the mandibular nerve (V3), accessory meningeal artery, and lesser petrosal nerve; relevant for mandibular nerve block anaesthesia."
+        },
+        {
+          "name": "Foramen spinosum",
+          "description": "Small foramen posterolateral to foramen ovale transmitting the middle meningeal artery and vein."
+        },
+        {
+          "name": "Lesser wing",
+          "description": "Thin, paired triangular plate forming part of the anterior cranial fossa and the superior orbital fissure margin."
+        },
+        {
+          "name": "Pterygoid process (medial and lateral plates)",
+          "description": "Paired plates projecting inferiorly; the medial plate ends in the pterygoid hamulus, and the lateral plate gives origin to the medial and lateral pterygoid muscles - key landmarks for local anaesthesia and prosthodontics."
+        },
+        {
+          "name": "Pterygoid hamulus",
+          "description": "Hook-like projection at the inferior end of the medial pterygoid plate around which the tendon of tensor veli palatini turns; palpable landmark distal to the maxillary tuberosity, relevant to greater palatine and posterior superior alveolar injections."
+        }
+      ]
+    },
+    "ethmoid_bone": {
+      "displayName": "Ethmoid Bone",
+      "mesh": "ethmoid_bone.glb",
+      "landmarks": [
+        {
+          "name": "Crista galli",
+          "description": "Triangular midline projection from the cribriform plate that gives attachment to the falx cerebri."
+        },
+        {
+          "name": "Cribriform plate",
+          "description": "Perforated horizontal plate through which olfactory nerve (CN I) fibres pass from the nasal cavity to the olfactory bulbs."
+        },
+        {
+          "name": "Perpendicular plate",
+          "description": "Vertical midline plate forming the superior part of the nasal septum."
+        },
+        {
+          "name": "Superior and middle nasal conchae",
+          "description": "Thin curled bony projections on the lateral mass forming part of the lateral nasal wall and directing airflow."
+        },
+        {
+          "name": "Ethmoidal labyrinth (lateral mass)",
+          "description": "Paired lateral masses containing the ethmoidal air cells, positioned between the orbit and nasal cavity; the lamina papyracea forms the thin medial orbital wall."
+        }
+      ]
+    },
+    "vomer": {
+      "displayName": "Vomer",
+      "mesh": "vomer.glb",
+      "landmarks": [
+        {
+          "name": "Ala of vomer",
+          "description": "Wing-like expansion at the superior border articulating with the sphenoid rostrum."
+        },
+        {
+          "name": "Posterior (free) border",
+          "description": "Concave posterior margin separating the two posterior nasal apertures (choanae)."
+        },
+        {
+          "name": "Groove for nasopalatine nerve and vessels",
+          "description": "Groove on the lateral surface transmitting the nasopalatine nerve toward the incisive canal, relevant to nasopalatine nerve block anaesthesia."
+        }
+      ]
+    },
+    "mandible": {
+      "displayName": "Mandible",
+      "mesh": "mandible.glb",
+      "landmarks": [
+        {
+          "name": "Mandibular condyle (head)",
+          "description": "Articulates with the mandibular fossa of the temporal bone to form the temporomandibular joint (TMJ)."
+        },
+        {
+          "name": "Coronoid process",
+          "description": "Anterior projection of the ramus giving insertion to temporalis muscle."
+        },
+        {
+          "name": "Mandibular notch",
+          "description": "Concavity between the condylar and coronoid processes."
+        },
+        {
+          "name": "Mandibular foramen",
+          "description": "Opening on the medial surface of the ramus, guarded by the lingula, transmitting the inferior alveolar nerve and vessels; primary target of the inferior alveolar nerve block."
+        },
+        {
+          "name": "Lingula",
+          "description": "Small bony spine immediately anterior to the mandibular foramen, giving attachment to the sphenomandibular ligament; a palpation guide during IAN block."
+        },
+        {
+          "name": "Mylohyoid line (oblique line, internal)",
+          "description": "Ridge on the medial surface of the body giving origin to mylohyoid muscle, separating the sublingual and submandibular fossae."
+        },
+        {
+          "name": "Mental foramen",
+          "description": "Opening on the external surface of the body, typically below the second premolar, transmitting the mental nerve and vessels; site of the mental nerve block."
+        },
+        {
+          "name": "Genial tubercles (mental spines)",
+          "description": "Small projections on the internal surface at the midline giving attachment to genioglossus (superior) and geniohyoid (inferior) muscles."
+        },
+        {
+          "name": "Oblique line (external)",
+          "description": "Ridge running from the anterior border of the ramus to the body, continuous with the anterior border of the ramus, giving attachment to buccinator posteriorly."
+        },
+        {
+          "name": "Angle of the mandible (gonion)",
+          "description": "Junction of the body and ramus; the lateral surface gives attachment to masseter and the medial surface to medial pterygoid."
+        },
+        {
+          "name": "Retromolar fossa/trigone",
+          "description": "Triangular area behind the last molar, relevant surgical landmark for lower third molar extractions."
+        },
+        {
+          "name": "Symphysis menti",
+          "description": "Midline fusion line of the mandibular body, site of union of the two embryological halves."
+        }
+      ]
+    },
+    "zygomatic_bone_right": {
+      "displayName": "Right Zygomatic Bone",
+      "mesh": "zygomatic_bone_right.glb",
+      "landmarks": [
+        {
+          "name": "Temporal process",
+          "description": "Posterior projection articulating with the zygomatic process of the temporal bone to form the zygomatic arch."
+        },
+        {
+          "name": "Frontal process",
+          "description": "Superior projection articulating with the zygomatic process of the frontal bone, forming the lateral orbital margin."
+        },
+        {
+          "name": "Zygomaticofacial foramen",
+          "description": "Small foramen on the lateral (facial) surface transmitting the zygomaticofacial nerve and vessels."
+        },
+        {
+          "name": "Zygomaticotemporal foramen",
+          "description": "Foramen on the temporal surface transmitting the zygomaticotemporal nerve."
+        },
+        {
+          "name": "Marginal tubercle (Whitnall's tubercle)",
+          "description": "Small elevation on the orbital rim giving attachment to lateral palpebral ligament and orbital fascia."
+        }
+      ]
+    },
+    "zygomatic_bone_left": {
+      "displayName": "Left Zygomatic Bone",
+      "mesh": "zygomatic_bone_left.glb",
+      "landmarks": [
+        {
+          "name": "Temporal process",
+          "description": "Posterior projection articulating with the zygomatic process of the temporal bone to form the zygomatic arch."
+        },
+        {
+          "name": "Frontal process",
+          "description": "Superior projection articulating with the zygomatic process of the frontal bone, forming the lateral orbital margin."
+        },
+        {
+          "name": "Zygomaticofacial foramen",
+          "description": "Small foramen on the lateral (facial) surface transmitting the zygomaticofacial nerve and vessels."
+        },
+        {
+          "name": "Zygomaticotemporal foramen",
+          "description": "Foramen on the temporal surface transmitting the zygomaticotemporal nerve."
+        },
+        {
+          "name": "Marginal tubercle (Whitnall's tubercle)",
+          "description": "Small elevation on the orbital rim giving attachment to lateral palpebral ligament and orbital fascia."
+        }
+      ]
+    },
+    "temporal_bone_right": {
+      "displayName": "Right Temporal Bone",
+      "mesh": "temporal_bone_right.glb",
+      "landmarks": [
+        {
+          "name": "Zygomatic process",
+          "description": "Anterior projection that joins the temporal process of the zygomatic bone to form the zygomatic arch."
+        },
+        {
+          "name": "Mandibular (glenoid) fossa",
+          "description": "Concave depression on the squamous part that articulates with the mandibular condyle to form the TMJ."
+        },
+        {
+          "name": "Articular tubercle",
+          "description": "Rounded eminence anterior to the mandibular fossa over which the condyle translates during jaw opening."
+        },
+        {
+          "name": "External acoustic meatus",
+          "description": "Canal leading to the tympanic membrane and middle ear."
+        },
+        {
+          "name": "Styloid process",
+          "description": "Slender downward projection giving attachment to stylohyoid, styloglossus, and stylopharyngeus muscles and the stylohyoid and stylomandibular ligaments."
+        },
+        {
+          "name": "Mastoid process",
+          "description": "Rounded projection posteroinferior to the ear giving attachment to sternocleidomastoid and other muscles; contains mastoid air cells."
+        },
+        {
+          "name": "Carotid canal",
+          "description": "Canal transmitting the internal carotid artery into the cranial cavity."
+        },
+        {
+          "name": "Stylomastoid foramen",
+          "description": "Opening between the styloid and mastoid processes through which the facial nerve (CN VII) exits the skull."
+        },
+        {
+          "name": "Petrotympanic fissure",
+          "description": "Narrow fissure transmitting the chorda tympani nerve (branch of CN VII) as it leaves the middle ear to join the lingual nerve."
+        }
+      ]
+    },
+    "temporal_bone_left": {
+      "displayName": "Left Temporal Bone",
+      "mesh": "temporal_bone_left.glb",
+      "landmarks": [
+        {
+          "name": "Zygomatic process",
+          "description": "Anterior projection that joins the temporal process of the zygomatic bone to form the zygomatic arch."
+        },
+        {
+          "name": "Mandibular (glenoid) fossa",
+          "description": "Concave depression on the squamous part that articulates with the mandibular condyle to form the TMJ."
+        },
+        {
+          "name": "Articular tubercle",
+          "description": "Rounded eminence anterior to the mandibular fossa over which the condyle translates during jaw opening."
+        },
+        {
+          "name": "External acoustic meatus",
+          "description": "Canal leading to the tympanic membrane and middle ear."
+        },
+        {
+          "name": "Styloid process",
+          "description": "Slender downward projection giving attachment to stylohyoid, styloglossus, and stylopharyngeus muscles and the stylohyoid and stylomandibular ligaments."
+        },
+        {
+          "name": "Mastoid process",
+          "description": "Rounded projection posteroinferior to the ear giving attachment to sternocleidomastoid and other muscles; contains mastoid air cells."
+        },
+        {
+          "name": "Carotid canal",
+          "description": "Canal transmitting the internal carotid artery into the cranial cavity."
+        },
+        {
+          "name": "Stylomastoid foramen",
+          "description": "Opening between the styloid and mastoid processes through which the facial nerve (CN VII) exits the skull."
+        },
+        {
+          "name": "Petrotympanic fissure",
+          "description": "Narrow fissure transmitting the chorda tympani nerve (branch of CN VII) as it leaves the middle ear to join the lingual nerve."
+        }
+      ]
+    },
+    "maxilla_right": {
+      "displayName": "Right Maxilla",
+      "mesh": "maxilla_right.glb",
+      "landmarks": [
+        {
+          "name": "Infraorbital foramen",
+          "description": "Opening below the orbital margin transmitting the infraorbital nerve (terminal branch of V2) and vessels; site of the infraorbital nerve block, typically above the second premolar."
+        },
+        {
+          "name": "Alveolar process",
+          "description": "Ridge of bone containing the tooth sockets (alveoli) for the maxillary teeth."
+        },
+        {
+          "name": "Maxillary tuberosity",
+          "description": "Rounded prominence on the posterior alveolar process behind the third molar; landmark for the posterior superior alveolar nerve block."
+        },
+        {
+          "name": "Canine fossa (eminence)",
+          "description": "Concavity on the facial surface lateral to the incisive fossa, overlying the canine root, giving origin to levator anguli oris."
+        },
+        {
+          "name": "Incisive fossa",
+          "description": "Shallow depression above the incisor teeth giving origin to part of the nasal muscles (depressor septi region)."
+        },
+        {
+          "name": "Zygomatic process",
+          "description": "Lateral projection articulating with the zygomatic bone, forming the zygomaticomaxillary buttress."
+        },
+        {
+          "name": "Frontal process",
+          "description": "Vertical projection that articulates with the frontal and nasal bones, forming part of the medial orbital margin."
+        },
+        {
+          "name": "Maxillary sinus (antrum of Highmore)",
+          "description": "Large pyramidal air-filled cavity within the body of the maxilla; its floor is closely related to the roots of the premolar and molar teeth, relevant in extractions and oroantral communication."
+        },
+        {
+          "name": "Palatine process",
+          "description": "Horizontal shelf that forms most of the hard palate and the floor of the nasal cavity, meeting its fellow at the median palatine suture."
+        },
+        {
+          "name": "Incisive foramen (canal)",
+          "description": "Opening in the anterior hard palate behind the central incisors transmitting the nasopalatine nerve and vessels; site of the nasopalatine nerve block."
+        },
+        {
+          "name": "Anterior nasal spine",
+          "description": "Sharp midline projection at the base of the nasal cavity where the two maxillae meet."
+        }
+      ]
+    },
+    "maxilla_left": {
+      "displayName": "Left Maxilla",
+      "mesh": "maxilla_left.glb",
+      "landmarks": [
+        {
+          "name": "Infraorbital foramen",
+          "description": "Opening below the orbital margin transmitting the infraorbital nerve (terminal branch of V2) and vessels; site of the infraorbital nerve block, typically above the second premolar."
+        },
+        {
+          "name": "Alveolar process",
+          "description": "Ridge of bone containing the tooth sockets (alveoli) for the maxillary teeth."
+        },
+        {
+          "name": "Maxillary tuberosity",
+          "description": "Rounded prominence on the posterior alveolar process behind the third molar; landmark for the posterior superior alveolar nerve block."
+        },
+        {
+          "name": "Canine fossa (eminence)",
+          "description": "Concavity on the facial surface lateral to the incisive fossa, overlying the canine root, giving origin to levator anguli oris."
+        },
+        {
+          "name": "Incisive fossa",
+          "description": "Shallow depression above the incisor teeth giving origin to part of the nasal muscles (depressor septi region)."
+        },
+        {
+          "name": "Zygomatic process",
+          "description": "Lateral projection articulating with the zygomatic bone, forming the zygomaticomaxillary buttress."
+        },
+        {
+          "name": "Frontal process",
+          "description": "Vertical projection that articulates with the frontal and nasal bones, forming part of the medial orbital margin."
+        },
+        {
+          "name": "Maxillary sinus (antrum of Highmore)",
+          "description": "Large pyramidal air-filled cavity within the body of the maxilla; its floor is closely related to the roots of the premolar and molar teeth, relevant in extractions and oroantral communication."
+        },
+        {
+          "name": "Palatine process",
+          "description": "Horizontal shelf that forms most of the hard palate and the floor of the nasal cavity, meeting its fellow at the median palatine suture."
+        },
+        {
+          "name": "Incisive foramen (canal)",
+          "description": "Opening in the anterior hard palate behind the central incisors transmitting the nasopalatine nerve and vessels; site of the nasopalatine nerve block."
+        },
+        {
+          "name": "Anterior nasal spine",
+          "description": "Sharp midline projection at the base of the nasal cavity where the two maxillae meet."
+        }
+      ]
+    },
+    "palatine_bone_right": {
+      "displayName": "Right Palatine Bone",
+      "mesh": "palatine_bone_right.glb",
+      "landmarks": [
+        {
+          "name": "Horizontal plate",
+          "description": "Forms the posterior part of the hard palate and floor of the nasal cavity, continuous with the palatine process of the maxilla."
+        },
+        {
+          "name": "Perpendicular plate",
+          "description": "Vertical portion forming part of the lateral nasal wall."
+        },
+        {
+          "name": "Greater palatine foramen",
+          "description": "Opening near the posterolateral corner of the hard palate transmitting the greater palatine nerve and vessels; site of the greater palatine nerve block, usually opposite the second/third molar."
+        },
+        {
+          "name": "Lesser palatine foramina",
+          "description": "Small openings posterior to the greater palatine foramen transmitting the lesser palatine nerves to the soft palate."
+        },
+        {
+          "name": "Pyramidal process",
+          "description": "Projects posteroinferiorly to fill the gap between the pterygoid plates of the sphenoid."
+        }
+      ]
+    },
+    "palatine_bone_left": {
+      "displayName": "Left Palatine Bone",
+      "mesh": "palatine_bone_left.glb",
+      "landmarks": [
+        {
+          "name": "Horizontal plate",
+          "description": "Forms the posterior part of the hard palate and floor of the nasal cavity, continuous with the palatine process of the maxilla."
+        },
+        {
+          "name": "Perpendicular plate",
+          "description": "Vertical portion forming part of the lateral nasal wall."
+        },
+        {
+          "name": "Greater palatine foramen",
+          "description": "Opening near the posterolateral corner of the hard palate transmitting the greater palatine nerve and vessels; site of the greater palatine nerve block, usually opposite the second/third molar."
+        },
+        {
+          "name": "Lesser palatine foramina",
+          "description": "Small openings posterior to the greater palatine foramen transmitting the lesser palatine nerves to the soft palate."
+        },
+        {
+          "name": "Pyramidal process",
+          "description": "Projects posteroinferiorly to fill the gap between the pterygoid plates of the sphenoid."
+        }
+      ]
+    },
+    "nasal_bone_right": {
+      "displayName": "Right Nasal Bone",
+      "mesh": "nasal_bone_right.glb",
+      "landmarks": [
+        {
+          "name": "Nasion (suture with frontal bone)",
+          "description": "Superior border articulating with the frontal bone at the frontonasal suture; the midline point here (nasion) is a standard cephalometric landmark."
+        },
+        {
+          "name": "Ethmoidal groove",
+          "description": "Groove on the internal surface for a branch of the anterior ethmoidal nerve."
+        },
+        {
+          "name": "Interalar/interseptal border",
+          "description": "Medial border articulating with its fellow bone and the perpendicular plate of the ethmoid, forming the bony bridge of the nose."
+        }
+      ]
+    },
+    "nasal_bone_left": {
+      "displayName": "Left Nasal Bone",
+      "mesh": "nasal_bone_left.glb",
+      "landmarks": [
+        {
+          "name": "Nasion (suture with frontal bone)",
+          "description": "Superior border articulating with the frontal bone at the frontonasal suture; the midline point here (nasion) is a standard cephalometric landmark."
+        },
+        {
+          "name": "Ethmoidal groove",
+          "description": "Groove on the internal surface for a branch of the anterior ethmoidal nerve."
+        },
+        {
+          "name": "Interalar/interseptal border",
+          "description": "Medial border articulating with its fellow bone and the perpendicular plate of the ethmoid, forming the bony bridge of the nose."
+        }
+      ]
+    },
+    "lacrimal_bone_right": {
+      "displayName": "Right Lacrimal Bone",
+      "mesh": "lacrimal_bone_right.glb",
+      "landmarks": [
+        {
+          "name": "Lacrimal groove/fossa",
+          "description": "Depression that houses the lacrimal sac, continuous inferiorly with the nasolacrimal canal."
+        },
+        {
+          "name": "Posterior lacrimal crest",
+          "description": "Vertical ridge dividing the bone into an anterior orbital part and posterior part related to the lacrimal sac; gives attachment to part of orbicularis oculi (Horner's muscle)."
+        }
+      ]
+    },
+    "lacrimal_bone_left": {
+      "displayName": "Left Lacrimal Bone",
+      "mesh": "lacrimal_bone_left.glb",
+      "landmarks": [
+        {
+          "name": "Lacrimal groove/fossa",
+          "description": "Depression that houses the lacrimal sac, continuous inferiorly with the nasolacrimal canal."
+        },
+        {
+          "name": "Posterior lacrimal crest",
+          "description": "Vertical ridge dividing the bone into an anterior orbital part and posterior part related to the lacrimal sac; gives attachment to part of orbicularis oculi (Horner's muscle)."
+        }
+      ]
+    },
+    "inferior_nasal_concha_right": {
+      "displayName": "Right Inferior Nasal Concha",
+      "mesh": "inferior_nasal_concha_right.glb",
+      "landmarks": [
+        {
+          "name": "Body and curved lamina",
+          "description": "Independent scroll-shaped bone (not part of the ethmoid) attached to the lateral nasal wall, forming the roof of the inferior nasal meatus into which the nasolacrimal duct drains."
+        },
+        {
+          "name": "Lacrimal process",
+          "description": "Small projection that helps complete the lower part of the nasolacrimal canal."
+        },
+        {
+          "name": "Maxillary process",
+          "description": "Projection that articulates with the maxilla, helping to close the maxillary hiatus."
+        }
+      ]
+    },
+    "inferior_nasal_concha_left": {
+      "displayName": "Left Inferior Nasal Concha",
+      "mesh": "inferior_nasal_concha_left.glb",
+      "landmarks": [
+        {
+          "name": "Body and curved lamina",
+          "description": "Independent scroll-shaped bone (not part of the ethmoid) attached to the lateral nasal wall, forming the roof of the inferior nasal meatus into which the nasolacrimal duct drains."
+        },
+        {
+          "name": "Lacrimal process",
+          "description": "Small projection that helps complete the lower part of the nasolacrimal canal."
+        },
+        {
+          "name": "Maxillary process",
+          "description": "Projection that articulates with the maxilla, helping to close the maxillary hiatus."
+        }
+      ]
+    }
+  },
+  "annotations": {
+    "mandible": [
+      {
+        "label": "Left condylar head",
+        "coordinateSpace": "part-local",
+        "position": [
+          40.70439910888672,
+          -104.52400207519531,
+          1515.5
+        ],
+        "offset": [
+          28,
+          0,
+          25
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/mandible.glb",
+          "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3",
+          "vertexIndex": 10164,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/",
+          "description": "Visually localized on the mandible surface in lateral, frontal and superior projections: condylar head is the rounded posterior superior process, coronoid tip is the anterior superior process. Selected mesh vertex, not a clinical landmark measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Left coronoid tip",
+        "coordinateSpace": "part-local",
+        "position": [
+          41.01649856567383,
+          -141.97500610351562,
+          1504.489990234375
+        ],
+        "offset": [
+          33,
+          -15,
+          2
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/mandible.glb",
+          "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3",
+          "vertexIndex": 9950,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/",
+          "description": "Visually localized on the mandible surface in lateral, frontal and superior projections: condylar head is the rounded posterior superior process, coronoid tip is the anterior superior process. Selected mesh vertex, not a clinical landmark measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Right condylar head",
+        "coordinateSpace": "part-local",
+        "position": [
+          -42.31159973144531,
+          -104.21199798583984,
+          1515.489990234375
+        ],
+        "offset": [
+          -28,
+          0,
+          25
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/mandible.glb",
+          "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3",
+          "vertexIndex": 976,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/",
+          "description": "Visually localized on the mandible surface in lateral, frontal and superior projections: condylar head is the rounded posterior superior process, coronoid tip is the anterior superior process. Selected mesh vertex, not a clinical landmark measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Right coronoid tip",
+        "coordinateSpace": "part-local",
+        "position": [
+          -42.31159973144531,
+          -141.97500610351562,
+          1504.43994140625
+        ],
+        "offset": [
+          -33,
+          -15,
+          2
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/mandible.glb",
+          "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3",
+          "vertexIndex": 618,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/",
+          "description": "Visually localized on the mandible surface in lateral, frontal and superior projections: condylar head is the rounded posterior superior process, coronoid tip is the anterior superior process. Selected mesh vertex, not a clinical landmark measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Left mental foramen (rim)",
+        "coordinateSpace": "part-local",
+        "position": [
+          20.03569984436035,
+          -165.69400024414062,
+          1451.8800048828125
+        ],
+        "offset": [
+          25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/mandible.glb",
+          "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3",
+          "vertexIndex": 7054,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Right mental foramen (rim)",
+        "coordinateSpace": "part-local",
+        "position": [
+          -20.77739906311035,
+          -166.33299255371094,
+          1451.25
+        ],
+        "offset": [
+          -25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/mandible.glb",
+          "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3",
+          "vertexIndex": 3539,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Left mandibular notch",
+        "coordinateSpace": "part-local",
+        "position": [
+          41.648101806640625,
+          -129.80299377441406,
+          1495.260009765625
+        ],
+        "offset": [
+          25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/mandible.glb",
+          "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3",
+          "vertexIndex": 10306,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Right mandibular notch",
+        "coordinateSpace": "part-local",
+        "position": [
+          -42.62369918823242,
+          -130.11500549316406,
+          1495.449951171875
+        ],
+        "offset": [
+          -25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/mandible.glb",
+          "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3",
+          "vertexIndex": 808,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Left mandibular angle region",
+        "coordinateSpace": "part-local",
+        "position": [
+          37.766300201416016,
+          -110.4540023803711,
+          1466.22998046875
+        ],
+        "offset": [
+          25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/mandible.glb",
+          "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3",
+          "vertexIndex": 9652,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Right mandibular angle region",
+        "coordinateSpace": "part-local",
+        "position": [
+          -39.051700592041016,
+          -110.4540023803711,
+          1465.9200439453125
+        ],
+        "offset": [
+          -25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/mandible.glb",
+          "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3",
+          "vertexIndex": 1464,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK532292/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      }
+    ],
+    "maxilla_left": [
+      {
+        "label": "Left infraorbital foramen (rim)",
+        "coordinateSpace": "part-local",
+        "position": [
+          24.55030059814453,
+          -168.9720001220703,
+          1504.550048828125
+        ],
+        "offset": [
+          25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/maxilla_left.glb",
+          "meshSha256": "fbeaac80003e22b89edc8824f64f200f4d306a413da30c41dbf2d3a932cb7ed9",
+          "vertexIndex": 5588,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK538527/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Left anterior nasal spine contribution",
+        "coordinateSpace": "part-local",
+        "position": [
+          0.5193459987640381,
+          -183.04299926757812,
+          1490.3900146484375
+        ],
+        "offset": [
+          25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/maxilla_left.glb",
+          "meshSha256": "fbeaac80003e22b89edc8824f64f200f4d306a413da30c41dbf2d3a932cb7ed9",
+          "vertexIndex": 299,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK538527/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Left maxillary tuberosity",
+        "coordinateSpace": "part-local",
+        "position": [
+          26.422800064086914,
+          -138.47500610351562,
+          1485.510009765625
+        ],
+        "offset": [
+          25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/maxilla_left.glb",
+          "meshSha256": "fbeaac80003e22b89edc8824f64f200f4d306a413da30c41dbf2d3a932cb7ed9",
+          "vertexIndex": 6164,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK538527/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Left palatine process (hard palate)",
+        "coordinateSpace": "part-local",
+        "position": [
+          7.697420120239258,
+          -160.88400268554688,
+          1486.1400146484375
+        ],
+        "offset": [
+          25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/maxilla_left.glb",
+          "meshSha256": "fbeaac80003e22b89edc8824f64f200f4d306a413da30c41dbf2d3a932cb7ed9",
+          "vertexIndex": 1472,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK538527/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      }
+    ],
+    "sphenoid_bone": [
+      {
+        "label": "Left pterygoid hamulus",
+        "coordinateSpace": "part-local",
+        "position": [
+          12.583999633789062,
+          -130.49099731445312,
+          1491.5
+        ],
+        "offset": [
+          25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/sphenoid_bone.glb",
+          "meshSha256": "4eabd09e12d16c6da74d60b5cefdb39f0847dfb3c03c593c2433842a8e310d45",
+          "vertexIndex": 4923,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK544308/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Right pterygoid hamulus",
+        "coordinateSpace": "part-local",
+        "position": [
+          -13.254500389099121,
+          -130.0749969482422,
+          1490.6700439453125
+        ],
+        "offset": [
+          -25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/sphenoid_bone.glb",
+          "meshSha256": "4eabd09e12d16c6da74d60b5cefdb39f0847dfb3c03c593c2433842a8e310d45",
+          "vertexIndex": 2354,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK544308/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Left lateral pterygoid plate",
+        "coordinateSpace": "part-local",
+        "position": [
+          20.984399795532227,
+          -130.0749969482422,
+          1501.9000244140625
+        ],
+        "offset": [
+          25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/sphenoid_bone.glb",
+          "meshSha256": "4eabd09e12d16c6da74d60b5cefdb39f0847dfb3c03c593c2433842a8e310d45",
+          "vertexIndex": 5779,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK544308/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Right lateral pterygoid plate",
+        "coordinateSpace": "part-local",
+        "position": [
+          -21.284299850463867,
+          -134.23699951171875,
+          1500.239990234375
+        ],
+        "offset": [
+          -25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/sphenoid_bone.glb",
+          "meshSha256": "4eabd09e12d16c6da74d60b5cefdb39f0847dfb3c03c593c2433842a8e310d45",
+          "vertexIndex": 1632,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK544308/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      }
+    ],
+    "maxilla_right": [
+      {
+        "label": "Right infraorbital foramen (rim)",
+        "coordinateSpace": "part-local",
+        "position": [
+          -24.753000259399414,
+          -169.28500366210938,
+          1505.010009765625
+        ],
+        "offset": [
+          -25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/maxilla_right.glb",
+          "meshSha256": "4e0ae864d4a7e5ef9bb5364a14c4109cbe1ca8954c78dc4c6ed11ed49ab54bf1",
+          "vertexIndex": 1401,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK538527/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Right anterior nasal spine contribution",
+        "coordinateSpace": "part-local",
+        "position": [
+          -1.9704699516296387,
+          -183.3800048828125,
+          1490.22998046875
+        ],
+        "offset": [
+          -25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/maxilla_right.glb",
+          "meshSha256": "4e0ae864d4a7e5ef9bb5364a14c4109cbe1ca8954c78dc4c6ed11ed49ab54bf1",
+          "vertexIndex": 6238,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK538527/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Right maxillary tuberosity",
+        "coordinateSpace": "part-local",
+        "position": [
+          -27.249799728393555,
+          -138.02699279785156,
+          1485.969970703125
+        ],
+        "offset": [
+          -25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/maxilla_right.glb",
+          "meshSha256": "4e0ae864d4a7e5ef9bb5364a14c4109cbe1ca8954c78dc4c6ed11ed49ab54bf1",
+          "vertexIndex": 1322,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK538527/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      },
+      {
+        "label": "Right palatine process (hard palate)",
+        "coordinateSpace": "part-local",
+        "position": [
+          -8.21226978302002,
+          -163.093994140625,
+          1486.1700439453125
+        ],
+        "offset": [
+          -25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/maxilla_right.glb",
+          "meshSha256": "4e0ae864d4a7e5ef9bb5364a14c4109cbe1ca8954c78dc4c6ed11ed49ab54bf1",
+          "vertexIndex": 5531,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK538527/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      }
+    ],
+    "palatine_bone_left": [
+      {
+        "label": "Left horizontal plate (hard palate)",
+        "coordinateSpace": "part-local",
+        "position": [
+          5.9989800453186035,
+          -146.61599731445312,
+          1487.4599609375
+        ],
+        "offset": [
+          25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/palatine_bone_left.glb",
+          "meshSha256": "cf3201324a1a309aba5666e9db2853e2080b8a9679cb6a881436cd4e6a3610d6",
+          "vertexIndex": 326,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK557817/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      }
+    ],
+    "palatine_bone_right": [
+      {
+        "label": "Right horizontal plate (hard palate)",
+        "coordinateSpace": "part-local",
+        "position": [
+          -4.598859786987305,
+          -145.89300537109375,
+          1485.97998046875
+        ],
+        "offset": [
+          -25,
+          0,
+          15
+        ],
+        "evidence": {
+          "status": "visual-localization",
+          "mesh": "meshes/skull/palatine_bone_right.glb",
+          "meshSha256": "541e79b2dcf182d0b9b918eb858e6079e6d90e8095bf31589f9921e321f880cb",
+          "vertexIndex": 1496,
+          "source": "https://www.ncbi.nlm.nih.gov/books/NBK557817/",
+          "description": "Surface feature visually localized in anterior, lateral and superior mesh projections. Foramen pointers mark the rim; broad plates and angle pointers identify regions. Selected source vertex, not a clinical measurement or independent expert validation.",
+          "reviewer": "Codex visual mesh inspection",
+          "date": "2026-09-07"
+        }
+      }
+    ]
+  }
+}

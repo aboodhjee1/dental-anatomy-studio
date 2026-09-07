@@ -1,0 +1,331 @@
+{
+  "meta": {
+    "title": "Salivary glands and duct openings"
+  },
+  "parts": {
+    "second_upper_molar_left": {
+      "displayName": "Left upper second molar",
+      "summary": "Dental reference for the parotid duct opening.",
+      "landmarks": [
+        {
+          "name": "Parotid papilla",
+          "description": "The parotid duct opens on the inner cheek opposite this tooth, in the oral vestibule. The opening is in mucosa, not in the tooth."
+        }
+      ],
+      "glandFamily": "parotid",
+      "color": "#f0e1bb",
+      "group": "Dental reference",
+      "mesh": "second_upper_molar_left.glb",
+      "sources": [
+        {
+          "title": "Salivary gland anatomy",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538325/"
+        },
+        {
+          "title": "Sublingual duct variation (cadaveric study)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9640814/"
+        }
+      ],
+      "sourceMesh": {
+        "file": "FJ1263_BP21638_FMA55700_Left second upper molar tooth.obj",
+        "fileId": "FJ1263",
+        "fmaId": "FMA55700",
+        "sourceName": "Left second upper molar tooth",
+        "sha256": "d1f79c5f1b744e4366d47a5a19e418c07560df8b465faed9c126e8fb6b9fb306",
+        "dataset": "BodyParts3D 4.3",
+        "license": "CC BY 4.0",
+        "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+      },
+      "modelNote": "BodyParts3D 4.3 source surface, using the existing skull registration. Ducts and mucosal openings are illustrated separately."
+    },
+    "second_upper_molar_right": {
+      "displayName": "Right upper second molar",
+      "summary": "Dental reference for the parotid duct opening.",
+      "landmarks": [
+        {
+          "name": "Parotid papilla",
+          "description": "The parotid duct opens on the inner cheek opposite this tooth, in the oral vestibule. The opening is in mucosa, not in the tooth."
+        }
+      ],
+      "glandFamily": "parotid",
+      "color": "#f0e1bb",
+      "group": "Dental reference",
+      "mesh": "second_upper_molar_right.glb",
+      "sources": [
+        {
+          "title": "Salivary gland anatomy",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538325/"
+        },
+        {
+          "title": "Sublingual duct variation (cadaveric study)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9640814/"
+        }
+      ],
+      "sourceMesh": {
+        "file": "FJ1275_BP19601_FMA55697_Right second upper molar tooth.obj",
+        "fileId": "FJ1275",
+        "fmaId": "FMA55697",
+        "sourceName": "Right second upper molar tooth",
+        "sha256": "570f96e4522a62f6bae3cd99039772984f1f0555a97cadf91b6d42c861e7ead4",
+        "dataset": "BodyParts3D 4.3",
+        "license": "CC BY 4.0",
+        "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+      },
+      "modelNote": "BodyParts3D 4.3 source surface, using the existing skull registration. Ducts and mucosal openings are illustrated separately."
+    },
+    "submandibular_gland_left": {
+      "summary": "Paired glands beneath the mandible; a deep portion extends around the posterior free border of mylohyoid.",
+      "landmarks": [
+        {
+          "name": "Wharton duct",
+          "description": "Travels forward in the floor of the mouth, medial to the sublingual gland."
+        },
+        {
+          "name": "Sublingual caruncle",
+          "description": "The duct opens on a small papilla on each side of the base of the lingual frenulum."
+        },
+        {
+          "name": "Lingual nerve relationship",
+          "description": "The lingual nerve loops below the duct as it passes from its lateral to medial side."
+        }
+      ],
+      "displayName": "Left submandibular gland",
+      "glandFamily": "submandibular",
+      "color": "#dc9b63",
+      "group": "Salivary glands",
+      "mesh": "submandibular_gland_left.glb",
+      "sources": [
+        {
+          "title": "Salivary gland anatomy",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538325/"
+        },
+        {
+          "title": "Sublingual duct variation (cadaveric study)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9640814/"
+        }
+      ],
+      "sourceMesh": {
+        "file": "FJ2766_BP23762_FMA59803_Left submandibular gland.obj",
+        "fileId": "FJ2766",
+        "fmaId": "FMA59803",
+        "sourceName": "Left submandibular gland",
+        "sha256": "710261df52af452a8cadbec961c8e9bdebdfb97b5fafa0d709f82a91a1eb59b9",
+        "dataset": "BodyParts3D 4.3",
+        "license": "CC BY 4.0",
+        "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+      },
+      "modelNote": "BodyParts3D 4.3 source surface, using the existing skull registration. Ducts and mucosal openings are illustrated separately."
+    },
+    "sublingual_gland_right": {
+      "summary": "Paired glands beneath the oral mucosa, above mylohyoid, forming the sublingual folds.",
+      "landmarks": [
+        {
+          "name": "Ducts of Rivinus \u2014 sublingual fold",
+          "description": "Multiple small ducts empty along the crest of the sublingual fold on either side of the tongue."
+        },
+        {
+          "name": "Bartholin duct \u2014 variable",
+          "description": "A major duct may join Wharton duct or open separately near the sublingual caruncle. A single shared opening is not universal."
+        },
+        {
+          "name": "Lingual frenulum",
+          "description": "The midline mucosal fold under the tongue separates the two sides. The caruncles lie beside its base; the sublingual folds extend laterally and posteriorly."
+        }
+      ],
+      "displayName": "Right sublingual gland",
+      "glandFamily": "sublingual",
+      "color": "#6ba89e",
+      "group": "Salivary glands",
+      "mesh": "sublingual_gland_right.glb",
+      "sources": [
+        {
+          "title": "Salivary gland anatomy",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538325/"
+        },
+        {
+          "title": "Sublingual duct variation (cadaveric study)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9640814/"
+        }
+      ],
+      "sourceMesh": {
+        "file": "FJ2767_BP23401_FMA59804_Right sublingual gland.obj",
+        "fileId": "FJ2767",
+        "fmaId": "FMA59804",
+        "sourceName": "Right sublingual gland",
+        "sha256": "1fd9e10f40654745b106f7208b168be5c4d854f8ab3a09ec2d54d1a647daaab2",
+        "dataset": "BodyParts3D 4.3",
+        "license": "CC BY 4.0",
+        "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+      },
+      "modelNote": "BodyParts3D 4.3 source surface, using the existing skull registration. Ducts and mucosal openings are illustrated separately."
+    },
+    "submandibular_gland_right": {
+      "summary": "Paired glands beneath the mandible; a deep portion extends around the posterior free border of mylohyoid.",
+      "landmarks": [
+        {
+          "name": "Wharton duct",
+          "description": "Travels forward in the floor of the mouth, medial to the sublingual gland."
+        },
+        {
+          "name": "Sublingual caruncle",
+          "description": "The duct opens on a small papilla on each side of the base of the lingual frenulum."
+        },
+        {
+          "name": "Lingual nerve relationship",
+          "description": "The lingual nerve loops below the duct as it passes from its lateral to medial side."
+        }
+      ],
+      "displayName": "Right submandibular gland",
+      "glandFamily": "submandibular",
+      "color": "#dc9b63",
+      "group": "Salivary glands",
+      "mesh": "submandibular_gland_right.glb",
+      "sources": [
+        {
+          "title": "Salivary gland anatomy",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538325/"
+        },
+        {
+          "title": "Sublingual duct variation (cadaveric study)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9640814/"
+        }
+      ],
+      "sourceMesh": {
+        "file": "FJ2768_BP23704_FMA59802_Right submandibular gland.obj",
+        "fileId": "FJ2768",
+        "fmaId": "FMA59802",
+        "sourceName": "Right submandibular gland",
+        "sha256": "777c0eea8b0ce55d89a945a2d59835041b58bed841bb10d537e7536102b99647",
+        "dataset": "BodyParts3D 4.3",
+        "license": "CC BY 4.0",
+        "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+      },
+      "modelNote": "BodyParts3D 4.3 source surface, using the existing skull registration. Ducts and mucosal openings are illustrated separately."
+    },
+    "sublingual_gland_left": {
+      "summary": "Paired glands beneath the oral mucosa, above mylohyoid, forming the sublingual folds.",
+      "landmarks": [
+        {
+          "name": "Ducts of Rivinus \u2014 sublingual fold",
+          "description": "Multiple small ducts empty along the crest of the sublingual fold on either side of the tongue."
+        },
+        {
+          "name": "Bartholin duct \u2014 variable",
+          "description": "A major duct may join Wharton duct or open separately near the sublingual caruncle. A single shared opening is not universal."
+        },
+        {
+          "name": "Lingual frenulum",
+          "description": "The midline mucosal fold under the tongue separates the two sides. The caruncles lie beside its base; the sublingual folds extend laterally and posteriorly."
+        }
+      ],
+      "displayName": "Left sublingual gland",
+      "glandFamily": "sublingual",
+      "color": "#6ba89e",
+      "group": "Salivary glands",
+      "mesh": "sublingual_gland_left.glb",
+      "sources": [
+        {
+          "title": "Salivary gland anatomy",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538325/"
+        },
+        {
+          "title": "Sublingual duct variation (cadaveric study)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9640814/"
+        }
+      ],
+      "sourceMesh": {
+        "file": "FJ4643_BP23722_FMA59805_Left sublingual gland.obj",
+        "fileId": "FJ4643",
+        "fmaId": "FMA59805",
+        "sourceName": "Left sublingual gland",
+        "sha256": "59ef73bbb32c8a9249e1606a6cb0ba8a9627b4fa11efb1372011ea550864e7f5",
+        "dataset": "BodyParts3D 4.3",
+        "license": "CC BY 4.0",
+        "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+      },
+      "modelNote": "BodyParts3D 4.3 source surface, using the existing skull registration. Ducts and mucosal openings are illustrated separately."
+    },
+    "parotid_gland_left": {
+      "summary": "Paired salivary glands beside the mandibular ramus, in front of and below the ear.",
+      "landmarks": [
+        {
+          "name": "Stensen duct",
+          "description": "Runs forward across masseter, turns medially at its anterior edge, then pierces buccinator."
+        },
+        {
+          "name": "Parotid papilla \u2014 upper second molar",
+          "description": "Opens into the oral vestibule on the inner cheek opposite the upper second molar. The two tooth meshes show the dental reference, not the duct opening itself."
+        },
+        {
+          "name": "Facial nerve relationship",
+          "description": "The facial nerve passes through the gland; it supplies facial expression muscles rather than the gland\u2019s secretion."
+        }
+      ],
+      "displayName": "Left parotid gland",
+      "glandFamily": "parotid",
+      "color": "#c581ad",
+      "group": "Salivary glands",
+      "mesh": "parotid_gland_left.glb",
+      "sources": [
+        {
+          "title": "Salivary gland anatomy",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538325/"
+        },
+        {
+          "title": "Sublingual duct variation (cadaveric study)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9640814/"
+        }
+      ],
+      "sourceMesh": {
+        "file": "Model_49_left_parotid_gland.vtk",
+        "sourceName": "Left parotid gland",
+        "sha256": "bf8991e881c0024ff4c5c087d93ee1acd51a61fc674cbae2912ef4b8ec6f9145",
+        "dataset": "SPL Head and Neck Atlas 2016-09",
+        "license": "3D Slicer License",
+        "source": "https://www.openanatomy.org/atlas-pages/atlas-spl-head-and-neck.html"
+      },
+      "modelNote": "SPL atlas surface from another specimen. Approximate alignment using the mandible; gland position has not been independently validated."
+    },
+    "parotid_gland_right": {
+      "summary": "Paired salivary glands beside the mandibular ramus, in front of and below the ear.",
+      "landmarks": [
+        {
+          "name": "Stensen duct",
+          "description": "Runs forward across masseter, turns medially at its anterior edge, then pierces buccinator."
+        },
+        {
+          "name": "Parotid papilla \u2014 upper second molar",
+          "description": "Opens into the oral vestibule on the inner cheek opposite the upper second molar. The two tooth meshes show the dental reference, not the duct opening itself."
+        },
+        {
+          "name": "Facial nerve relationship",
+          "description": "The facial nerve passes through the gland; it supplies facial expression muscles rather than the gland\u2019s secretion."
+        }
+      ],
+      "displayName": "Right parotid gland",
+      "glandFamily": "parotid",
+      "color": "#c581ad",
+      "group": "Salivary glands",
+      "mesh": "parotid_gland_right.glb",
+      "sources": [
+        {
+          "title": "Salivary gland anatomy",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538325/"
+        },
+        {
+          "title": "Sublingual duct variation (cadaveric study)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9640814/"
+        }
+      ],
+      "sourceMesh": {
+        "file": "Model_50_right_parotid_gland.vtk",
+        "sourceName": "Right parotid gland",
+        "sha256": "f843888b44e7161da7a42aac06fcd86b8984a33e876c1debab73a3e4531e9a27",
+        "dataset": "SPL Head and Neck Atlas 2016-09",
+        "license": "3D Slicer License",
+        "source": "https://www.openanatomy.org/atlas-pages/atlas-spl-head-and-neck.html"
+      },
+      "modelNote": "SPL atlas surface from another specimen. Approximate alignment using the mandible; gland position has not been independently validated."
+    }
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "mandible": [
+    {
+      "label": "Condylar process",
+      "anchor": [
+        0.72,
+        0.92,
+        0.1
+      ],
+      "offset": [
+        35,
+        30,
+        25
+      ]
+    },
+    {
+      "label": "Coronoid process",
+      "anchor": [
+        -0.62,
+        0.88,
+        0.12
+      ],
+      "offset": [
+        -35,
+        28,
+        20
+      ]
+    },
+    {
+      "label": "Mandibular foramen",
+      "anchor": [
+        0.57,
+        0.26,
+        -0.72
+      ],
+      "offset": [
+        42,
+        6,
+        -15
+      ]
+    },
+    {
+      "label": "Mental foramen",
+      "anchor": [
+        0.42,
+        -0.38,
+        0.82
+      ],
+      "offset": [
+        36,
+        -10,
+        22
+      ]
+    },
+    {
+      "label": "Alveolar process",
+      "anchor": [
+        0,
+        0.23,
+        0.76
+      ],
+      "offset": [
+        0,
+        34,
+        28
+      ]
+    },
+    {
+      "label": "Angle (gonion)",
+      "anchor": [
+        0.78,
+        -0.52,
+        0.12
+      ],
+      "offset": [
+        45,
+        -25,
+        18
+      ]
+    }
+  ],
+  "maxilla_right": [
+    {
+      "label": "Infraorbital foramen",
+      "anchor": [
+        0.32,
+        0.35,
+        0.9
+      ],
+      "offset": [
+        35,
+        12,
+        30
+      ]
+    },
+    {
+      "label": "Alveolar process",
+      "anchor": [
+        0.1,
+        -0.55,
+        0.8
+      ],
+      "offset": [
+        18,
+        -32,
+        24
+      ]
+    },
+    {
+      "label": "Maxillary tuberosity",
+      "anchor": [
+        -0.78,
+        -0.35,
+        0.15
+      ],
+      "offset": [
+        -38,
+        -14,
+        22
+      ]
+    },
+    {
+      "label": "Canine fossa",
+      "anchor": [
+        0.58,
+        -0.05,
+        0.86
+      ],
+      "offset": [
+        42,
+        3,
+        25
+      ]
+    },
+    {
+      "label": "Anterior nasal spine",
+      "anchor": [
+        0.9,
+        -0.15,
+        0.65
+      ],
+      "offset": [
+        32,
+        10,
+        25
+      ]
+    }
+  ],
+  "maxilla_left": [
+    {
+      "label": "Infraorbital foramen",
+      "anchor": [
+        -0.32,
+        0.35,
+        0.9
+      ],
+      "offset": [
+        -35,
+        12,
+        30
+      ]
+    },
+    {
+      "label": "Alveolar process",
+      "anchor": [
+        -0.1,
+        -0.55,
+        0.8
+      ],
+      "offset": [
+        -18,
+        -32,
+        24
+      ]
+    },
+    {
+      "label": "Maxillary tuberosity",
+      "anchor": [
+        0.78,
+        -0.35,
+        0.15
+      ],
+      "offset": [
+        38,
+        -14,
+        22
+      ]
+    },
+    {
+      "label": "Canine fossa",
+      "anchor": [
+        -0.58,
+        -0.05,
+        0.86
+      ],
+      "offset": [
+        -42,
+        3,
+        25
+      ]
+    },
+    {
+      "label": "Anterior nasal spine",
+      "anchor": [
+        -0.9,
+        -0.15,
+        0.65
+      ],
+      "offset": [
+        -32,
+        10,
+        25
+      ]
+    }
+  ],
+  "frontal_bone": [
+    {
+      "label": "Supraorbital notch / foramen",
+      "anchor": [
+        0.42,
+        -0.34,
+        0.86
+      ],
+      "offset": [
+        35,
+        -18,
+        28
+      ]
+    },
+    {
+      "label": "Supraorbital margin",
+      "anchor": [
+        -0.52,
+        -0.28,
+        0.82
+      ],
+      "offset": [
+        -40,
+        -10,
+        28
+      ]
+    },
+    {
+      "label": "Glabella",
+      "anchor": [
+        0,
+        -0.26,
+        0.92
+      ],
+      "offset": [
+        0,
+        28,
+        34
+      ]
+    }
+  ],
+  "zygomatic_bone_right": [
+    {
+      "label": "Lateral orbital margin",
+      "anchor": [
+        0.52,
+        0.48,
+        0.75
+      ],
+      "offset": [
+        40,
+        22,
+        30
+      ]
+    },
+    {
+      "label": "Zygomaticofacial foramen",
+      "anchor": [
+        0.72,
+        -0.02,
+        0.86
+      ],
+      "offset": [
+        45,
+        0,
+        25
+      ]
+    }
+  ],
+  "zygomatic_bone_left": [
+    {
+      "label": "Lateral orbital margin",
+      "anchor": [
+        -0.52,
+        0.48,
+        0.75
+      ],
+      "offset": [
+        -40,
+        22,
+        30
+      ]
+    },
+    {
+      "label": "Zygomaticofacial foramen",
+      "anchor": [
+        -0.72,
+        -0.02,
+        0.86
+      ],
+      "offset": [
+        -45,
+        0,
+        25
+      ]
+    }
+  ],
+  "palatine_bone_right": [
+    {
+      "label": "Greater palatine foramen",
+      "anchor": [
+        0.28,
+        -0.72,
+        0.72
+      ],
+      "offset": [
+        35,
+        -25,
+        30
+      ]
+    }
+  ],
+  "palatine_bone_left": [
+    {
+      "label": "Greater palatine foramen",
+      "anchor": [
+        -0.28,
+        -0.72,
+        0.72
+      ],
+      "offset": [
+        -35,
+        -25,
+        30
+      ]
+    }
+  ],
+  "sphenoid_bone": [
+    {
+      "label": "Pterygoid hamulus",
+      "anchor": [
+        0.58,
+        -0.78,
+        0.45
+      ],
+      "offset": [
+        38,
+        -25,
+        25
+      ]
+    },
+    {
+      "label": "Foramen ovale",
+      "anchor": [
+        -0.35,
+        -0.05,
+        0.62
+      ],
+      "offset": [
+        -35,
+        5,
+        30
+      ]
+    }
+  ]
+}

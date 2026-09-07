@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#164c48">
+  <title>Dental Anatomy Studio</title>
+  <link rel="stylesheet" href="css/style.css?v=0.5.3">
+  <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <a class="brand" href="./" aria-label="Dental Anatomy Studio home"><span class="brand-mark" aria-hidden="true">da<span>↗</span></span><span>Dental Anatomy <strong>Studio</strong><small>EXPLORE · UNDERSTAND · REMEMBER</small></span></a>
+      <div class="header-right"><span class="local-badge"><i></i> Your study space</span><button id="help-button" class="quiet-button">How to explore <span aria-hidden="true">?</span></button></div>
+    </header>
+
+    <aside id="sidebar" aria-label="Structure browser">
+      <div class="sidebar-intro"><span class="eyebrow">YOUR ATLAS</span><h1>Head &amp; neck</h1><p>Anatomy for the dental mind.</p></div>
+      <div class="scope-tabs filter-bar" aria-label="Anatomy scope"><button data-scope="all" aria-pressed="true">All anatomy</button><button data-scope="dental" aria-pressed="false">Dentistry only</button></div><p id="dentistry-scope-note" class="model-note" hidden>Dental structures and supporting bones for the jaws, palate, chewing and TMJ. Other skull bones are hidden from the model and list.</p>
+      <section class="layers-section" aria-labelledby="layers-title">
+        <div class="section-heading"><h2 id="layers-title">Visible layers</h2><span>Toggle to explore</span></div>
+        <div id="layer-controls"></div>
+      </section>
+      <div class="structure-browser">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="structure-search" type="search" placeholder="Find a structure or landmark…" aria-label="Search structures and study notes"></label>
+        <div class="filter-bar" id="layer-filters" aria-label="Filter structure list"></div>
+        <div class="list-heading"><h2>Structures <span id="result-count">0</span></h2><button id="show-filtered" class="text-button">Show results</button></div>
+        <div id="part-list" aria-label="Structures"></div>
+        <p id="no-results" class="empty-search" hidden>No matching structures.<br>Try a nerve, bone, or landmark name.</p>
+      </div>
+      <div class="sidebar-footer"><span class="keycap">Esc</span> Clear selection <span class="keycap">/</span> Search</div>
+    </aside>
+
+    <main id="workspace">
+      <div class="workspace-heading"><div><span class="eyebrow">INTERACTIVE ATLAS</span><h2 id="scene-title">Explore the skull</h2></div><button id="reset-view" class="quiet-button" title="Restore the default layers, opacity, camera and selection">↺ Reset</button></div>
+      <div class="preset-bar" aria-label="Study views">
+        <button data-preset="bones" aria-pressed="true">Bone study</button><button data-preset="nerves" aria-pressed="false">Dental nerves</button><button data-preset="salivary" aria-pressed="false">Salivary glands</button><button data-preset="all" aria-pressed="false">All layers</button>
+      </div>
+      <div id="viewer-container">
+        <div id="loading-indicator" role="status">Preparing your atlas…</div>
+        <div id="selection-chip" hidden><span id="selection-name"></span><button id="clear-selection" aria-label="Clear selection">×</button></div>
+        <div id="structure-menu" class="structure-menu" role="group" aria-label="Structure actions" hidden>
+          <div class="structure-menu-heading"><strong data-structure-name></strong><button data-structure-action="close" aria-label="Close structure actions">×</button></div>
+          <div class="structure-menu-buttons"><button data-structure-action="hide">Hide this</button><button data-structure-action="solo">Show only this</button><button data-structure-action="notes">Study notes</button></div>
+        </div>
+        <div class="orientation" aria-hidden="true"><span>R</span><i>ANTERIOR VIEW</i><span>L</span></div>
+        <p id="empty-scene" hidden>All structures are hidden.<button id="restore-scene" class="text-button">Restore bone study</button></p>
+      </div>
+      <div class="viewer-bottom">
+        <div class="view-toolbar" aria-label="Camera views"><button data-view="front" aria-pressed="true">Front</button><button data-view="right" aria-pressed="false">Right</button><button data-view="left" aria-pressed="false">Left</button><button data-view="base" aria-pressed="false">Base</button><span></span><button id="fit-view" title="Fit all visible structures in the viewer">Fit view</button></div>
+        <div class="visibility-actions"><button id="restore-context" class="quiet-button" hidden>Restore other structures</button><button id="undo-hide" class="quiet-button" hidden>Undo hide</button></div><span id="structure-action-status" class="sr-only" role="status"></span>
+        <button id="duct-openings-button" class="text-button duct-shortcut">Duct openings in the mouth ↗</button><p class="interaction-hint">Hover for Hide / Show only · Drag to rotate · Scroll to zoom</p>
+        <div class="explore-controls"><label for="explode-slider">Separate bones <output id="explode-value">0%</output><input id="explode-slider" type="range" min="0" max="100" value="0"></label><label class="label-toggle"><input id="labels-toggle" type="checkbox"> Structure &amp; landmark labels <small id="labels-status" role="status">Names + available landmarks</small></label></div>
+        <div id="nerve-legend" class="nerve-legend" hidden><span><i style="background:#dbad32"></i> V2 · Maxillary</span><span><i style="background:#d88526"></i> V3 · Mandibular</span></div>
+        <p id="model-note" class="model-note" hidden><span aria-hidden="true">◈</span> BodyParts3D 4.3 nerve meshes · aligned to this skull. Reference anatomy; individual courses vary.</p>
+        <p id="salivary-note" class="model-note" hidden>Parotids: SPL atlas, approximately aligned from another specimen. Other glands: BodyParts3D. See duct openings in the diagram.</p>
+        <p id="explode-note" class="model-note" hidden>Bones are separated. Nerves and glands remain in their assembled positions.</p>
+      </div>
+    </main>
+
+    <aside id="panel" aria-label="Study notes" tabindex="-1">
+      <div class="panel-topline"><span class="eyebrow">STUDY NOTES</span><button id="back-to-model" class="text-button mobile-nav">↑ Back to model</button><span id="panel-badge" class="badge">Start exploring</span></div>
+      <div id="panel-content"></div>
+    </aside>
+
+    <footer class="app-footer"><span>BodyParts3D © The Database Center for Life Science · Bones/muscles: <a href="https://creativecommons.org/licenses/by-sa/2.1/jp/" target="_blank" rel="noopener">CC BY-SA 2.1 Japan</a> · BodyParts3D nerves/glands/teeth: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span><span>Parotids: <a href="https://www.openanatomy.org/atlas-pages/atlas-spl-head-and-neck.html" target="_blank" rel="noopener">SPL atlas / Slicer license</a></span></footer>
+  </div>
+  <dialog id="help-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close help">×</button></form><span class="eyebrow">MAKE IT YOURS</span><h2>A closer look at anatomy.</h2><p>Choose a study view, then select a structure on the model or in the list.</p><dl><dt>Move around</dt><dd>Drag to rotate, scroll or pinch to zoom, right-drag or use two fingers to pan.</dd><dt>See beneath the surface</dt><dd>Hover over a bone, nerve or gland for Hide this, Show only this and Study notes. Right-click opens the same menu. On touch screens, select a structure and use Hide or Show only in the study notes. Undo hide restores the last hidden part; Restore other structures exits solo view. Layer checkboxes remain available.</dd><dt>Focus on one structure</dt><dd>Select it and choose “Show only”. “Restore context” brings back your previous visibility choices.</dd><dt>Study dental nerves</dt><dd>The Dental nerves view reveals V2 and V3 pathways through transparent bones. These are sourced BodyParts3D 4.3 meshes registered to the skull. The model contains 26 structures. Independent lesser palatine and incisive meshes are not available in this source; the maxillary trunk includes its infraorbital continuation. Use the linked references for anatomical detail.</dd><dt>Keyboard</dt><dd>Tab through controls, Enter to select a structure, / to search, Esc to clear selection.</dd></dl><p class="muted">Labels name visible structures. Select the mandible, maxillae, palatine bones or sphenoid for dental surface landmarks. The Salivary glands view adds six glands and upper second molars. Open Duct openings for teaching diagrams of the cheek and floor of the mouth. This atlas is for anatomy study, not procedural planning.</p></dialog>
+  <dialog id="duct-dialog" aria-labelledby="duct-title">
+    <form method="dialog"><button class="dialog-close" aria-label="Close duct diagram">×</button></form>
+    <span class="eyebrow">SALIVARY GLANDS</span><h2 id="duct-title">Where saliva enters the mouth</h2>
+    <div class="duct-tabs" aria-label="Choose a gland"><button data-duct="parotid" aria-pressed="true">Parotid</button><button data-duct="submandibular" aria-pressed="false">Submandibular</button><button data-duct="sublingual" aria-pressed="false">Sublingual</button></div>
+    <p id="duct-summary"></p><div id="duct-diagram"></div>
+    <p class="muted">Teaching diagrams, not to scale. Ducts and mucosal openings are not represented by the 3D meshes. Sublingual duct patterns vary.</p>
+    <p><a href="https://www.ncbi.nlm.nih.gov/books/NBK538325/" target="_blank" rel="noopener">Salivary gland anatomy</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9640814/" target="_blank" rel="noopener">Sublingual duct variation</a> · <a href="https://www.openanatomy.org/atlas-pages/atlas-spl-head-and-neck.html" target="_blank" rel="noopener">Parotid atlas and license</a></p>
+  </dialog>
+  <script type="module" src="js/app.js?v=0.5.2"></script>
+</body>
+</html>

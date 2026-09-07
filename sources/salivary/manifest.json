@@ -1,0 +1,85 @@
+{
+  "retrieved": "2026-09-07",
+  "parts": {
+    "second_upper_molar_left": {
+      "file": "FJ1263_BP21638_FMA55700_Left second upper molar tooth.obj",
+      "fileId": "FJ1263",
+      "fmaId": "FMA55700",
+      "sourceName": "Left second upper molar tooth",
+      "sha256": "d1f79c5f1b744e4366d47a5a19e418c07560df8b465faed9c126e8fb6b9fb306",
+      "dataset": "BodyParts3D 4.3",
+      "license": "CC BY 4.0",
+      "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+    },
+    "second_upper_molar_right": {
+      "file": "FJ1275_BP19601_FMA55697_Right second upper molar tooth.obj",
+      "fileId": "FJ1275",
+      "fmaId": "FMA55697",
+      "sourceName": "Right second upper molar tooth",
+      "sha256": "570f96e4522a62f6bae3cd99039772984f1f0555a97cadf91b6d42c861e7ead4",
+      "dataset": "BodyParts3D 4.3",
+      "license": "CC BY 4.0",
+      "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+    },
+    "submandibular_gland_left": {
+      "file": "FJ2766_BP23762_FMA59803_Left submandibular gland.obj",
+      "fileId": "FJ2766",
+      "fmaId": "FMA59803",
+      "sourceName": "Left submandibular gland",
+      "sha256": "710261df52af452a8cadbec961c8e9bdebdfb97b5fafa0d709f82a91a1eb59b9",
+      "dataset": "BodyParts3D 4.3",
+      "license": "CC BY 4.0",
+      "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+    },
+    "sublingual_gland_right": {
+      "file": "FJ2767_BP23401_FMA59804_Right sublingual gland.obj",
+      "fileId": "FJ2767",
+      "fmaId": "FMA59804",
+      "sourceName": "Right sublingual gland",
+      "sha256": "1fd9e10f40654745b106f7208b168be5c4d854f8ab3a09ec2d54d1a647daaab2",
+      "dataset": "BodyParts3D 4.3",
+      "license": "CC BY 4.0",
+      "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+    },
+    "submandibular_gland_right": {
+      "file": "FJ2768_BP23704_FMA59802_Right submandibular gland.obj",
+      "fileId": "FJ2768",
+      "fmaId": "FMA59802",
+      "sourceName": "Right submandibular gland",
+      "sha256": "777c0eea8b0ce55d89a945a2d59835041b58bed841bb10d537e7536102b99647",
+      "dataset": "BodyParts3D 4.3",
+      "license": "CC BY 4.0",
+      "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+    },
+    "sublingual_gland_left": {
+      "file": "FJ4643_BP23722_FMA59805_Left sublingual gland.obj",
+      "fileId": "FJ4643",
+      "fmaId": "FMA59805",
+      "sourceName": "Left sublingual gland",
+      "sha256": "59ef73bbb32c8a9249e1606a6cb0ba8a9627b4fa11efb1372011ea550864e7f5",
+      "dataset": "BodyParts3D 4.3",
+      "license": "CC BY 4.0",
+      "source": "https://lifesciencedb.jp/bp3d/download.cgi"
+    },
+    "parotid_gland_left": {
+      "file": "Model_49_left_parotid_gland.vtk",
+      "sourceName": "Left parotid gland",
+      "sha256": "bf8991e881c0024ff4c5c087d93ee1acd51a61fc674cbae2912ef4b8ec6f9145",
+      "dataset": "SPL Head and Neck Atlas 2016-09",
+      "license": "3D Slicer License",
+      "source": "https://www.openanatomy.org/atlas-pages/atlas-spl-head-and-neck.html"
+    },
+    "parotid_gland_right": {
+      "file": "Model_50_right_parotid_gland.vtk",
+      "sourceName": "Right parotid gland",
+      "sha256": "f843888b44e7161da7a42aac06fcd86b8984a33e876c1debab73a3e4531e9a27",
+      "dataset": "SPL Head and Neck Atlas 2016-09",
+      "license": "3D Slicer License",
+      "source": "https://www.openanatomy.org/atlas-pages/atlas-spl-head-and-neck.html"
+    }
+  },
+  "attribution": {
+    "BodyParts3D": "BodyParts3D, The Database Center for Life Science, CC BY 4.0",
+    "SPL": "Marianna Jakab and Ron Kikinis, Surgical Planning Laboratory, Brigham and Women\u2019s Hospital. Parotids converted from VTK and approximately aligned to a different atlas mandible."
+  }
+}

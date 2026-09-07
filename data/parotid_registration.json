@@ -1,0 +1,37 @@
+{
+  "source": "SPL Head and Neck Atlas 2016-09",
+  "referenceBone": "mandible",
+  "preRotation": [
+    -1,
+    -1,
+    1
+  ],
+  "rotationRowVector": [
+    [
+      0.9993759210842261,
+      0.004868160394360015,
+      0.034986702780182996
+    ],
+    [
+      -0.0025676056856368977,
+      0.9978491581367631,
+      -0.06550164125269951
+    ],
+    [
+      -0.03523032441089863,
+      0.06537093100246545,
+      0.9972389210323548
+    ]
+  ],
+  "scale": 0.890853415803942,
+  "translation": [
+    -3.5095797529962174,
+    -119.33115003339216,
+    1477.03312322431
+  ],
+  "rmsNearestVertexMm": 2.9908376988437926,
+  "p95Mm": 5.65416155052661,
+  "limitation": "Different atlas specimen. Uniform similarity fit against mandible only; approximate educational overlay, not validation of gland placement.",
+  "referenceSourceSha256": "2da943525c14d1bc18ae97d212662c05129a1944a322a1a7e3c9a12492935d50",
+  "referenceTargetSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3"
+}

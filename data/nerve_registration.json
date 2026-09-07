@@ -1,0 +1,38 @@
+{
+  "scale": 0.9441757368073543,
+  "translation": [
+    -0.03864296737807049,
+    -14.727094944733125,
+    93.39480700524405
+  ],
+  "referenceBones": [
+    {
+      "name": "mandible",
+      "rmsNearestVertexMm": 0.4728018722260444,
+      "medianMm": 0.2839725623704121,
+      "p95Mm": 0.943693265812264
+    },
+    {
+      "name": "frontal_bone",
+      "rmsNearestVertexMm": 0.4730372148505458,
+      "medianMm": 0.28774371018596523,
+      "p95Mm": 0.9285441767199225
+    },
+    {
+      "name": "maxilla_left",
+      "rmsNearestVertexMm": 0.418341270093724,
+      "medianMm": 0.30140427830373234,
+      "p95Mm": 0.7882143603447219
+    },
+    {
+      "name": "maxilla_right",
+      "rmsNearestVertexMm": 0.4100275613749372,
+      "medianMm": 0.29483946075415557,
+      "p95Mm": 0.7457233327373126
+    }
+  ],
+  "method": "Uniform scale + translation fitted jointly to four matching bones using trimmed nearest-vertex least squares (15 iterations). No nerve-specific bending, mirroring or thickness changes.",
+  "coordinateRule": "target = source * scale + translation",
+  "units": "mm",
+  "limitations": "Reference-bone vertex distances measure registration agreement, not clinical nerve accuracy. Atlas model only; no patient-specific validation."
+}

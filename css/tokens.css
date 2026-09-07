@@ -1,0 +1,4 @@
+:root{--font:Inter,"Segoe UI",Arial,sans-serif;--ink:#263c34;--teal:#164c48;--muted:#819086;--paper:#f3f5ef;--line:#e4e9e1}
+.mobile-nav{display:none}
+.nerve-legend{display:flex;gap:16px;font-size:9px;color:#6b776d;margin-top:14px}.nerve-legend span{display:flex;align-items:center;gap:5px}.nerve-legend i{display:inline-block;width:7px;height:7px;border-radius:50%}
+@media(max-width:950px){.mobile-nav{display:inline-block}}

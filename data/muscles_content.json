@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "layer": "muscles",
+    "title": "Muscles of Mastication",
+    "description": "Dental-relevant muscles supplied as a separate study layer.",
+    "attribution": "Muscle meshes: BodyParts3D, (c) The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan."
+  },
+  "muscles": {
+    "temporalis_right": {
+      "displayName": "Right Temporalis", "mesh": "temporalis_right.stl", "color": "#bb4c57",
+      "landmarks": [{ "name": "Action", "description": "Elevates the mandible; posterior fibres also retract it. Its tendon inserts on the coronoid process and anterior ramus." }, { "name": "Dental relevance", "description": "A primary muscle of mastication and a common contributor to jaw-clenching pain and temporomandibular disorder assessment." }]
+    },
+    "temporalis_left": {
+      "displayName": "Left Temporalis", "mesh": "temporalis_left.stl", "color": "#bb4c57",
+      "landmarks": [{ "name": "Action", "description": "Elevates the mandible; posterior fibres also retract it. Its tendon inserts on the coronoid process and anterior ramus." }, { "name": "Dental relevance", "description": "A primary muscle of mastication and a common contributor to jaw-clenching pain and temporomandibular disorder assessment." }]
+    },
+    "medial_pterygoid_right": {
+      "displayName": "Right Medial Pterygoid", "mesh": "medial_pterygoid_right.stl", "color": "#c85d68",
+      "landmarks": [{ "name": "Action", "description": "Elevates and protrudes the mandible; with the opposite side it contributes to side-to-side grinding movements." }, { "name": "Attachment", "description": "Runs from the pterygoid region to the medial surface of the mandibular angle, forming a muscular sling with masseter." }]
+    },
+    "medial_pterygoid_left": {
+      "displayName": "Left Medial Pterygoid", "mesh": "medial_pterygoid_left.stl", "color": "#c85d68",
+      "landmarks": [{ "name": "Action", "description": "Elevates and protrudes the mandible; with the opposite side it contributes to side-to-side grinding movements." }, { "name": "Attachment", "description": "Runs from the pterygoid region to the medial surface of the mandibular angle, forming a muscular sling with masseter." }]
+    },
+    "buccinator_right": {
+      "displayName": "Right Buccinator", "mesh": "buccinator_right.stl", "color": "#d77772",
+      "landmarks": [{ "name": "Action", "description": "Compresses the cheek against the teeth and gums, keeping food between the occlusal surfaces during mastication." }, { "name": "Dental relevance", "description": "Important for denture stability, cheek biting, and control of the food bolus; it is supplied by the facial nerve." }]
+    },
+    "buccinator_left": {
+      "displayName": "Left Buccinator", "mesh": "buccinator_left.stl", "color": "#d77772",
+      "landmarks": [{ "name": "Action", "description": "Compresses the cheek against the teeth and gums, keeping food between the occlusal surfaces during mastication." }, { "name": "Dental relevance", "description": "Important for denture stability, cheek biting, and control of the food bolus; it is supplied by the facial nerve." }]
+    },
+    "mylohyoid_right": {
+      "displayName": "Right Mylohyoid", "mesh": "mylohyoid_right.stl", "color": "#ae4d61",
+      "landmarks": [{ "name": "Action", "description": "Elevates the floor of the mouth and hyoid during swallowing; when the hyoid is fixed, it assists mandibular depression." }, { "name": "Dental relevance", "description": "Forms the muscular diaphragm of the mouth and separates the sublingual from submandibular spaces, important in spread of odontogenic infection." }]
+    },
+    "mylohyoid_left": {
+      "displayName": "Left Mylohyoid", "mesh": "mylohyoid_left.stl", "color": "#ae4d61",
+      "landmarks": [{ "name": "Action", "description": "Elevates the floor of the mouth and hyoid during swallowing; when the hyoid is fixed, it assists mandibular depression." }, { "name": "Dental relevance", "description": "Forms the muscular diaphragm of the mouth and separates the sublingual from submandibular spaces, important in spread of odontogenic infection." }]
+    }
+  }
+}

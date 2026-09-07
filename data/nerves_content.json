@@ -1,0 +1,982 @@
+{
+  "meta": {
+    "title": "Dental nerves",
+    "geometry": "BodyParts3D 4.3 source meshes aligned to the existing skull. Source topology and thickness retained.",
+    "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+    "reviewed": "2026-09-07",
+    "coverage": "26 structures: 13 nerve families, left and right. No independent infraorbital, lesser palatine or incisive meshes in the selected source. Maxillary trunk includes its continuing infraorbital course.",
+    "limitations": "Reference atlas, not patient-specific anatomy; individual variations and terminal branches are not fully represented."
+  },
+  "parts": {
+    "anterior_superior_alveolar_nerve_left": {
+      "displayName": "Left Anterior superior alveolar nerve",
+      "mesh": "anterior_superior_alveolar_nerve_left.glb",
+      "division": "V2",
+      "group": "Upper dentition",
+      "color": "#dbad32",
+      "summary": "V2 · Upper dentition · Left side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "Upper incisors and canine through the superior dental plexus."
+        },
+        {
+          "name": "Course",
+          "description": "Arises from the infraorbital nerve and descends in the anterior maxillary wall."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Maxilla: nerve supply — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538527/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3930 · FMA52942",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3930_BP29082_FMA52942_Left anterior superior alveolar nerve.obj",
+        "fileId": "FJ3930",
+        "representationId": "BP29082",
+        "fmaId": "FMA52942",
+        "sourceName": "Left anterior superior alveolar nerve",
+        "sha256": "ce2cfc344ca89a5d7e56e168d279d652a50860ea3ec4f4c5eef01f3b65dc22aa"
+      }
+    },
+    "anterior_superior_alveolar_nerve_right": {
+      "displayName": "Right Anterior superior alveolar nerve",
+      "mesh": "anterior_superior_alveolar_nerve_right.glb",
+      "division": "V2",
+      "group": "Upper dentition",
+      "color": "#dbad32",
+      "summary": "V2 · Upper dentition · Right side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "Upper incisors and canine through the superior dental plexus."
+        },
+        {
+          "name": "Course",
+          "description": "Arises from the infraorbital nerve and descends in the anterior maxillary wall."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Maxilla: nerve supply — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538527/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3892 · FMA52941",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3892_BP29071_FMA52941_Right anterior superior alveolar nerve.obj",
+        "fileId": "FJ3892",
+        "representationId": "BP29071",
+        "fmaId": "FMA52941",
+        "sourceName": "Right anterior superior alveolar nerve",
+        "sha256": "576e6451f91fd44c6ce28fdfd5986eb6bd6ee7c15f09f52ed95d411d55d5a292"
+      }
+    },
+    "auriculotemporal_nerve_left": {
+      "displayName": "Left Auriculotemporal nerve",
+      "mesh": "auriculotemporal_nerve_left.glb",
+      "division": "V3",
+      "group": "TMJ region",
+      "color": "#d88526",
+      "summary": "V3 · TMJ region · Left side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "Sensation from the temporal and auricular region, with articular branches to the temporomandibular joint."
+        },
+        {
+          "name": "Course",
+          "description": "Travels posteriorly from V3 and ascends near the external ear."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Mandibular nerve — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK507820/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3931 · FMA80541",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3931_BP29210_FMA80541_Trunk of left auriculotemporal nerve.obj",
+        "fileId": "FJ3931",
+        "representationId": "BP29210",
+        "fmaId": "FMA80541",
+        "sourceName": "Trunk of left auriculotemporal nerve",
+        "sha256": "3c52884c9eb53a7d4b2f5183b95bc9f3b49a00d256b9d3fb875ca561f46f15f6"
+      }
+    },
+    "auriculotemporal_nerve_right": {
+      "displayName": "Right Auriculotemporal nerve",
+      "mesh": "auriculotemporal_nerve_right.glb",
+      "division": "V3",
+      "group": "TMJ region",
+      "color": "#d88526",
+      "summary": "V3 · TMJ region · Right side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "Sensation from the temporal and auricular region, with articular branches to the temporomandibular joint."
+        },
+        {
+          "name": "Course",
+          "description": "Travels posteriorly from V3 and ascends near the external ear."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Mandibular nerve — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK507820/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3893 · FMA80540",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3893_BP29166_FMA80540_Trunk of right auriculotemporal nerve.obj",
+        "fileId": "FJ3893",
+        "representationId": "BP29166",
+        "fmaId": "FMA80540",
+        "sourceName": "Trunk of right auriculotemporal nerve",
+        "sha256": "1a2820984531bce032339479d2206e1908f3512a7f40ad18b255f68324d9a36a"
+      }
+    },
+    "buccal_nerve_left": {
+      "displayName": "Left Long buccal nerve",
+      "mesh": "buccal_nerve_left.glb",
+      "division": "V3",
+      "group": "Oral sensory branch",
+      "color": "#d88526",
+      "summary": "V3 · Oral sensory branch · Left side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "Sensation from the cheek and buccal gingiva of lower molars."
+        },
+        {
+          "name": "Distinction",
+          "description": "This V3 sensory nerve differs from the facial nerve branches that move buccinator."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Mandibular nerve — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK507820/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3935 · FMA53068",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3935_BP29164_FMA53068_Left buccal nerve.obj",
+        "fileId": "FJ3935",
+        "representationId": "BP29164",
+        "fmaId": "FMA53068",
+        "sourceName": "Left buccal nerve",
+        "sha256": "51d301007c9d8587bcf90f8d10a04252632a21ad109e46be86f57c11e019b83c"
+      }
+    },
+    "buccal_nerve_right": {
+      "displayName": "Right Long buccal nerve",
+      "mesh": "buccal_nerve_right.glb",
+      "division": "V3",
+      "group": "Oral sensory branch",
+      "color": "#d88526",
+      "summary": "V3 · Oral sensory branch · Right side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "Sensation from the cheek and buccal gingiva of lower molars."
+        },
+        {
+          "name": "Distinction",
+          "description": "This V3 sensory nerve differs from the facial nerve branches that move buccinator."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Mandibular nerve — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK507820/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3897 · FMA53067",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3897_BP29111_FMA53067_Right buccal nerve.obj",
+        "fileId": "FJ3897",
+        "representationId": "BP29111",
+        "fmaId": "FMA53067",
+        "sourceName": "Right buccal nerve",
+        "sha256": "2f5b9de8f0879b7b6dcd72d759ed98d079637c4c31dce3bb5bf0388b9efc19c5"
+      }
+    },
+    "greater_palatine_nerve_left": {
+      "displayName": "Left Greater palatine nerve",
+      "mesh": "greater_palatine_nerve_left.glb",
+      "division": "V2",
+      "group": "Palatal branch",
+      "color": "#dbad32",
+      "summary": "V2 · Palatal branch · Left side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Emerges through the greater palatine foramen and runs anteriorly."
+        },
+        {
+          "name": "Supply",
+          "description": "Hard-palate mucosa and adjacent palatal gingiva."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Palate: sensory innervation — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK557817/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3940 · FMA52804",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3940_BP29137_FMA52804_Left greater palatine nerve.obj",
+        "fileId": "FJ3940",
+        "representationId": "BP29137",
+        "fmaId": "FMA52804",
+        "sourceName": "Left greater palatine nerve",
+        "sha256": "0f52ddabacff1ee7ec335536d40f197d41e500c00ee8e2b6b3c1d425b679866f"
+      }
+    },
+    "greater_palatine_nerve_right": {
+      "displayName": "Right Greater palatine nerve",
+      "mesh": "greater_palatine_nerve_right.glb",
+      "division": "V2",
+      "group": "Palatal branch",
+      "color": "#dbad32",
+      "summary": "V2 · Palatal branch · Right side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Emerges through the greater palatine foramen and runs anteriorly."
+        },
+        {
+          "name": "Supply",
+          "description": "Hard-palate mucosa and adjacent palatal gingiva."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Palate: sensory innervation — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK557817/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3902 · FMA52803",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3902_BP29212_FMA52803_Right greater palatine nerve.obj",
+        "fileId": "FJ3902",
+        "representationId": "BP29212",
+        "fmaId": "FMA52803",
+        "sourceName": "Right greater palatine nerve",
+        "sha256": "de6bcfc880cc87de8e945898dc882298db5b7307ddb723115461c68a10defd23"
+      }
+    },
+    "inferior_alveolar_nerve_left": {
+      "displayName": "Left Inferior alveolar nerve",
+      "mesh": "inferior_alveolar_nerve_left.glb",
+      "division": "V3",
+      "group": "Lower dentition",
+      "color": "#d88526",
+      "summary": "V3 · Lower dentition · Left side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Enters the mandibular foramen and travels within the mandibular canal."
+        },
+        {
+          "name": "Branches",
+          "description": "Gives off the mylohyoid nerve before entry; continues as mental and incisive branches."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Inferior alveolar nerve anatomy — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK564368/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3942 · FMA80519",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3942_BP29102_FMA80519_Trunk of left inferior alveolar nerve.obj",
+        "fileId": "FJ3942",
+        "representationId": "BP29102",
+        "fmaId": "FMA80519",
+        "sourceName": "Trunk of left inferior alveolar nerve",
+        "sha256": "47f86e1c2bd4aefa937b1e30c56fdb7371c94564ef58161b9fa44485e8317bab"
+      }
+    },
+    "inferior_alveolar_nerve_right": {
+      "displayName": "Right Inferior alveolar nerve",
+      "mesh": "inferior_alveolar_nerve_right.glb",
+      "division": "V3",
+      "group": "Lower dentition",
+      "color": "#d88526",
+      "summary": "V3 · Lower dentition · Right side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Enters the mandibular foramen and travels within the mandibular canal."
+        },
+        {
+          "name": "Branches",
+          "description": "Gives off the mylohyoid nerve before entry; continues as mental and incisive branches."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Inferior alveolar nerve anatomy — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK564368/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3903 · FMA80518",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3903_BP29069_FMA80518_Trunk of right inferior alveolar nerve.obj",
+        "fileId": "FJ3903",
+        "representationId": "BP29069",
+        "fmaId": "FMA80518",
+        "sourceName": "Trunk of right inferior alveolar nerve",
+        "sha256": "2eab9520e09631b4d0b618204dfdf480f07a29f5d1c4954c3bfe72fcda5b3aa3"
+      }
+    },
+    "lingual_nerve_left": {
+      "displayName": "Left Lingual nerve",
+      "mesh": "lingual_nerve_left.glb",
+      "division": "V3",
+      "group": "Oral sensory branch",
+      "color": "#d88526",
+      "summary": "V3 · Oral sensory branch · Left side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "General sensation from the anterior two-thirds of the tongue, floor of mouth and lingual gingiva."
+        },
+        {
+          "name": "Dental relationship",
+          "description": "Passes near the mandibular third-molar region. Taste fibers reach it through chorda tympani (CN VII)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Lingual nerve — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK546652/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3949 · FMA80512",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3949_BP29199_FMA80512_Trunk of left lingual nerve.obj",
+        "fileId": "FJ3949",
+        "representationId": "BP29199",
+        "fmaId": "FMA80512",
+        "sourceName": "Trunk of left lingual nerve",
+        "sha256": "fc111c90759c98a8884557b3dc6fc1dbf8dec735ff6a1ab96b163b0eafc392bd"
+      }
+    },
+    "lingual_nerve_right": {
+      "displayName": "Right Lingual nerve",
+      "mesh": "lingual_nerve_right.glb",
+      "division": "V3",
+      "group": "Oral sensory branch",
+      "color": "#d88526",
+      "summary": "V3 · Oral sensory branch · Right side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "General sensation from the anterior two-thirds of the tongue, floor of mouth and lingual gingiva."
+        },
+        {
+          "name": "Dental relationship",
+          "description": "Passes near the mandibular third-molar region. Taste fibers reach it through chorda tympani (CN VII)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Lingual nerve — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK546652/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3984 · FMA80511",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3984_BP29156_FMA80511_Trunk of right lingual nerve.obj",
+        "fileId": "FJ3984",
+        "representationId": "BP29156",
+        "fmaId": "FMA80511",
+        "sourceName": "Trunk of right lingual nerve",
+        "sha256": "ee5a91f1c971091bfa3398f7d102669308fe82380e22563a81369ecf00c2d8a1"
+      }
+    },
+    "mandibular_nerve_left": {
+      "displayName": "Left Mandibular nerve",
+      "mesh": "mandibular_nerve_left.glb",
+      "division": "V3",
+      "group": "Main division",
+      "color": "#d88526",
+      "summary": "V3 · Main division · Left side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Leaves the cranium through foramen ovale."
+        },
+        {
+          "name": "Function",
+          "description": "Mixed division: sensory branches serve lower facial and oral regions; motor branches supply muscles of mastication."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Mandibular nerve — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK507820/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3951 · FMA52998",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3951_BP29377_FMA52998_Left mandibular nerve.obj",
+        "fileId": "FJ3951",
+        "representationId": "BP29377",
+        "fmaId": "FMA52998",
+        "sourceName": "Left mandibular nerve",
+        "sha256": "258363cb099ac440b381d0770b4b3c342ba01cc99a376f3860a54280f96d1117"
+      }
+    },
+    "mandibular_nerve_right": {
+      "displayName": "Right Mandibular nerve",
+      "mesh": "mandibular_nerve_right.glb",
+      "division": "V3",
+      "group": "Main division",
+      "color": "#d88526",
+      "summary": "V3 · Main division · Right side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Leaves the cranium through foramen ovale."
+        },
+        {
+          "name": "Function",
+          "description": "Mixed division: sensory branches serve lower facial and oral regions; motor branches supply muscles of mastication."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Mandibular nerve — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK507820/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3985 · FMA52997",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3985_BP29281_FMA52997_Right mandibular nerve.obj",
+        "fileId": "FJ3985",
+        "representationId": "BP29281",
+        "fmaId": "FMA52997",
+        "sourceName": "Right mandibular nerve",
+        "sha256": "a82827feaf5225334b8f5985c1df076f1fa8b1d1eb83b83ec7541c2716d7e2b8"
+      }
+    },
+    "maxillary_nerve_left": {
+      "displayName": "Left Maxillary nerve trunk",
+      "mesh": "maxillary_nerve_left.glb",
+      "division": "V2",
+      "group": "Main division",
+      "color": "#dbad32",
+      "summary": "V2 · Source trunk model · Left side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Passes through foramen rotundum into the pterygopalatine fossa."
+        },
+        {
+          "name": "Distribution",
+          "description": "Sensory supply to the midface, upper teeth and palate through its branches."
+        },
+        {
+          "name": "Model coverage",
+          "description": "This source object includes the continuing infraorbital course. There is no separately selectable infraorbital nerve in this layer."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Maxillary nerve — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK542277/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3954 · FMA80595",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3954_BP29330_FMA80595_Trunk of left maxillary nerve.obj",
+        "fileId": "FJ3954",
+        "representationId": "BP29330",
+        "fmaId": "FMA80595",
+        "sourceName": "Trunk of left maxillary nerve",
+        "sha256": "3e079970c3f9693ffd478eafc0185f454edd3c6694165cb6ac0d73a99d17910b"
+      }
+    },
+    "maxillary_nerve_right": {
+      "displayName": "Right Maxillary nerve trunk",
+      "mesh": "maxillary_nerve_right.glb",
+      "division": "V2",
+      "group": "Main division",
+      "color": "#dbad32",
+      "summary": "V2 · Source trunk model · Right side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Passes through foramen rotundum into the pterygopalatine fossa."
+        },
+        {
+          "name": "Distribution",
+          "description": "Sensory supply to the midface, upper teeth and palate through its branches."
+        },
+        {
+          "name": "Model coverage",
+          "description": "This source object includes the continuing infraorbital course. There is no separately selectable infraorbital nerve in this layer."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Maxillary nerve — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK542277/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3988 · FMA80594",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3988_BP29403_FMA80594_Trunk of right maxillary nerve.obj",
+        "fileId": "FJ3988",
+        "representationId": "BP29403",
+        "fmaId": "FMA80594",
+        "sourceName": "Trunk of right maxillary nerve",
+        "sha256": "4d33aeccaf8e6c2f637cabb7179b4892f7a6bff650496463115b8b8c01484fd2"
+      }
+    },
+    "mental_nerve_left": {
+      "displayName": "Left Mental nerve",
+      "mesh": "mental_nerve_left.glb",
+      "division": "V3",
+      "group": "Facial branch",
+      "color": "#d88526",
+      "summary": "V3 · Facial branch · Left side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Exits the mandible through the mental foramen."
+        },
+        {
+          "name": "Supply",
+          "description": "Sensation from the lower lip and chin. Distinguish this soft-tissue territory from pulpal supply."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Inferior alveolar nerve anatomy — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK564368/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3956 · FMA53252",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3956_BP28937_FMA53252_Left mental nerve.obj",
+        "fileId": "FJ3956",
+        "representationId": "BP28937",
+        "fmaId": "FMA53252",
+        "sourceName": "Left mental nerve",
+        "sha256": "fa99a0de8a38dde67a7c5e19a7a86aca6b4e02f456fa0f52e8833f9b1a0097bb"
+      }
+    },
+    "mental_nerve_right": {
+      "displayName": "Right Mental nerve",
+      "mesh": "mental_nerve_right.glb",
+      "division": "V3",
+      "group": "Facial branch",
+      "color": "#d88526",
+      "summary": "V3 · Facial branch · Right side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Exits the mandible through the mental foramen."
+        },
+        {
+          "name": "Supply",
+          "description": "Sensation from the lower lip and chin. Distinguish this soft-tissue territory from pulpal supply."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Inferior alveolar nerve anatomy — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK564368/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3990 · FMA53251",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3990_BP28919_FMA53251_Right mental nerve.obj",
+        "fileId": "FJ3990",
+        "representationId": "BP28919",
+        "fmaId": "FMA53251",
+        "sourceName": "Right mental nerve",
+        "sha256": "cac2afe3a3e1de780161592f430b2734420e6535ed5b1115dc5070fe29db42d5"
+      }
+    },
+    "middle_superior_alveolar_nerve_left": {
+      "displayName": "Left Middle superior alveolar nerve",
+      "mesh": "middle_superior_alveolar_nerve_left.glb",
+      "division": "V2",
+      "group": "Upper dentition",
+      "color": "#dbad32",
+      "summary": "V2 · Upper dentition · Left side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "Upper premolar region through the superior dental plexus."
+        },
+        {
+          "name": "Variation",
+          "description": "Often absent; neighboring superior alveolar branches then provide overlapping supply."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Maxilla: nerve supply — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538527/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3957 · FMA52940",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3957_BP29084_FMA52940_Left middle superior alveolar nerve.obj",
+        "fileId": "FJ3957",
+        "representationId": "BP29084",
+        "fmaId": "FMA52940",
+        "sourceName": "Left middle superior alveolar nerve",
+        "sha256": "e76340fbdf8782335e603cbf47f5e46cc2fdbab9f9ba90e87075c644c2c92fc5"
+      }
+    },
+    "middle_superior_alveolar_nerve_right": {
+      "displayName": "Right Middle superior alveolar nerve",
+      "mesh": "middle_superior_alveolar_nerve_right.glb",
+      "division": "V2",
+      "group": "Upper dentition",
+      "color": "#dbad32",
+      "summary": "V2 · Upper dentition · Right side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "Upper premolar region through the superior dental plexus."
+        },
+        {
+          "name": "Variation",
+          "description": "Often absent; neighboring superior alveolar branches then provide overlapping supply."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Maxilla: nerve supply — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538527/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3991 · FMA52939",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3991_BP28993_FMA52939_Right middle superior alveolar nerve.obj",
+        "fileId": "FJ3991",
+        "representationId": "BP28993",
+        "fmaId": "FMA52939",
+        "sourceName": "Right middle superior alveolar nerve",
+        "sha256": "1171bd1816579f1b7e98174e2e2ce46c9e5d15c5369034b1b6f242f0ddb25808"
+      }
+    },
+    "mylohyoid_nerve_left": {
+      "displayName": "Left Nerve to mylohyoid",
+      "mesh": "mylohyoid_nerve_left.glb",
+      "division": "V3",
+      "group": "Motor branch",
+      "color": "#d88526",
+      "summary": "V3 · Motor branch · Left side",
+      "landmarks": [
+        {
+          "name": "Origin",
+          "description": "Branches from the inferior alveolar nerve before the mandibular foramen."
+        },
+        {
+          "name": "Supply",
+          "description": "Motor supply to mylohyoid and the anterior belly of digastric."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Inferior alveolar nerve anatomy — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK564368/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3958 · FMA80524",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3958_BP28957_FMA80524_Trunk of left mylohyoid nerve.obj",
+        "fileId": "FJ3958",
+        "representationId": "BP28957",
+        "fmaId": "FMA80524",
+        "sourceName": "Trunk of left mylohyoid nerve",
+        "sha256": "c4c2d3ab3bd7bd731fb681ef815b1c29b2095b951cb9200c563cd1af0ad703f8"
+      }
+    },
+    "mylohyoid_nerve_right": {
+      "displayName": "Right Nerve to mylohyoid",
+      "mesh": "mylohyoid_nerve_right.glb",
+      "division": "V3",
+      "group": "Motor branch",
+      "color": "#d88526",
+      "summary": "V3 · Motor branch · Right side",
+      "landmarks": [
+        {
+          "name": "Origin",
+          "description": "Branches from the inferior alveolar nerve before the mandibular foramen."
+        },
+        {
+          "name": "Supply",
+          "description": "Motor supply to mylohyoid and the anterior belly of digastric."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Inferior alveolar nerve anatomy — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK564368/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3992 · FMA80523",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3992_BP28909_FMA80523_Trunk of right mylohyoid nerve.obj",
+        "fileId": "FJ3992",
+        "representationId": "BP28909",
+        "fmaId": "FMA80523",
+        "sourceName": "Trunk of right mylohyoid nerve",
+        "sha256": "6382b1da8b450c807ce651c54a250faec2721d02422ed7cbe8ba76c7042d71b3"
+      }
+    },
+    "nasopalatine_nerve_left": {
+      "displayName": "Left Nasopalatine nerve",
+      "mesh": "nasopalatine_nerve_left.glb",
+      "division": "V2",
+      "group": "Palatal branch",
+      "color": "#dbad32",
+      "summary": "V2 · Palatal branch · Left side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Runs along the nasal septum to the incisive canal."
+        },
+        {
+          "name": "Supply",
+          "description": "Anterior hard palate and adjacent palatal gingiva."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Palate: sensory innervation — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK557817/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3959 · FMA52799",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3959_BP29143_FMA52799_Left nasopalatine nerve.obj",
+        "fileId": "FJ3959",
+        "representationId": "BP29143",
+        "fmaId": "FMA52799",
+        "sourceName": "Left nasopalatine nerve",
+        "sha256": "7b347f625403ea3c9f9911c961ea38fd25dfee427375de68baae50154c0873d3"
+      }
+    },
+    "nasopalatine_nerve_right": {
+      "displayName": "Right Nasopalatine nerve",
+      "mesh": "nasopalatine_nerve_right.glb",
+      "division": "V2",
+      "group": "Palatal branch",
+      "color": "#dbad32",
+      "summary": "V2 · Palatal branch · Right side",
+      "landmarks": [
+        {
+          "name": "Course",
+          "description": "Runs along the nasal septum to the incisive canal."
+        },
+        {
+          "name": "Supply",
+          "description": "Anterior hard palate and adjacent palatal gingiva."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Palate: sensory innervation — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK557817/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3993 · FMA52798",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3993_BP29147_FMA52798_Right nasopalatine nerve.obj",
+        "fileId": "FJ3993",
+        "representationId": "BP29147",
+        "fmaId": "FMA52798",
+        "sourceName": "Right nasopalatine nerve",
+        "sha256": "ee1728878871e867bf6fa41be7d9864634b71419a99c7040e1e08a9a057734a0"
+      }
+    },
+    "posterior_superior_alveolar_nerve_left": {
+      "displayName": "Left Posterior superior alveolar nerve",
+      "mesh": "posterior_superior_alveolar_nerve_left.glb",
+      "division": "V2",
+      "group": "Upper dentition",
+      "color": "#dbad32",
+      "summary": "V2 · Upper dentition · Left side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "Upper molars and adjacent buccal tissues; contributes to the superior dental plexus."
+        },
+        {
+          "name": "Course",
+          "description": "Descends behind the maxilla and enters its posterior surface."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Maxilla: nerve supply — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538527/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ3975 · FMA52937",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ3975_BP29013_FMA52937_Left posterior superior alveolar nerve.obj",
+        "fileId": "FJ3975",
+        "representationId": "BP29013",
+        "fmaId": "FMA52937",
+        "sourceName": "Left posterior superior alveolar nerve",
+        "sha256": "47f19a959066883cd56e2508c15a5161e442a78e249610b26fca810e733aa186"
+      }
+    },
+    "posterior_superior_alveolar_nerve_right": {
+      "displayName": "Right Posterior superior alveolar nerve",
+      "mesh": "posterior_superior_alveolar_nerve_right.glb",
+      "division": "V2",
+      "group": "Upper dentition",
+      "color": "#dbad32",
+      "summary": "V2 · Upper dentition · Right side",
+      "landmarks": [
+        {
+          "name": "Supply",
+          "description": "Upper molars and adjacent buccal tissues; contributes to the superior dental plexus."
+        },
+        {
+          "name": "Course",
+          "description": "Descends behind the maxilla and enters its posterior surface."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Maxilla: nerve supply — NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538527/"
+        },
+        {
+          "title": "BodyParts3D 4.3 · FJ4003 · FMA52936",
+          "url": "https://lifesciencedb.jp/bp3d/?lng=en"
+        }
+      ],
+      "geometryType": "source atlas mesh",
+      "sourceMesh": {
+        "file": "FJ4003_BP28997_FMA52936_Right posterior superior alveolar nerve.obj",
+        "fileId": "FJ4003",
+        "representationId": "BP28997",
+        "fmaId": "FMA52936",
+        "sourceName": "Right posterior superior alveolar nerve",
+        "sha256": "81458ca8ba6a3e600ea48f30ad8e74efcb6b81eef49cd820b85050bb046a000f"
+      }
+    }
+  }
+}

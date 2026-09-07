@@ -1,0 +1,125 @@
+{
+  "scene": {
+    "rotation": [
+      -90,
+      0,
+      0
+    ]
+  },
+  "layers": [
+    {
+      "id": "skull",
+      "label": "Bones",
+      "partsKey": "bones",
+      "color": "#b9b09a",
+      "meshFolder": "meshes/skull",
+      "contentFile": "data/skull_content.json",
+      "enabledByDefault": true,
+      "presets": {
+        "bones": {
+          "visible": true,
+          "opacity": 1
+        },
+        "nerves": {
+          "visible": true,
+          "opacity": 0.16
+        },
+        "all": {
+          "visible": true,
+          "opacity": 0.4
+        },
+        "salivary": {
+          "visible": true,
+          "opacity": 0.16
+        }
+      }
+    },
+    {
+      "id": "muscles",
+      "label": "Muscles",
+      "partsKey": "muscles",
+      "color": "#bd797c",
+      "explode": false,
+      "meshFolder": "meshes/muscles",
+      "contentFile": "data/muscles_content.json",
+      "enabledByDefault": false,
+      "presets": {
+        "bones": {
+          "visible": false,
+          "opacity": 1
+        },
+        "nerves": {
+          "visible": false,
+          "opacity": 1
+        },
+        "all": {
+          "visible": true,
+          "opacity": 0.55
+        },
+        "salivary": {
+          "visible": false,
+          "opacity": 1
+        }
+      }
+    },
+    {
+      "id": "nerves",
+      "label": "Nerves",
+      "color": "#d7a431",
+      "meshFolder": "meshes/nerves",
+      "contentFile": "data/nerves_content.json",
+      "partsKey": "parts",
+      "enabledByDefault": false,
+      "studyType": "nerve",
+      "geometryType": "source atlas mesh",
+      "explode": false,
+      "presets": {
+        "bones": {
+          "visible": false,
+          "opacity": 1
+        },
+        "nerves": {
+          "visible": true,
+          "opacity": 1
+        },
+        "all": {
+          "visible": true,
+          "opacity": 1
+        },
+        "salivary": {
+          "visible": false,
+          "opacity": 1
+        }
+      }
+    },
+    {
+      "id": "salivary",
+      "label": "Salivary",
+      "color": "#c581ad",
+      "partsKey": "parts",
+      "studyType": "salivary",
+      "explode": false,
+      "meshFolder": "meshes/salivary",
+      "contentFile": "data/salivary_content.json",
+      "enabledByDefault": false,
+      "presets": {
+        "bones": {
+          "visible": false,
+          "opacity": 1
+        },
+        "nerves": {
+          "visible": false,
+          "opacity": 1
+        },
+        "all": {
+          "visible": true,
+          "opacity": 1
+        },
+        "salivary": {
+          "visible": true,
+          "opacity": 1
+        }
+      }
+    }
+  ]
+}
