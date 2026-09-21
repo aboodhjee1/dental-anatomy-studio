@@ -1,0 +1,402 @@
+{
+  "coordinateSpace": "atlas-local",
+  "placementStatus": "Approximate study localizations; not expert-validated measurements.",
+  "placementMethod": "Manual visual inspection of this mesh version in anterior, lateral and superior projections. Surface records retain the selected vertex and mesh hash. S and Gn are explicitly constructed.",
+  "sources": [
+    {
+      "title": "3D landmark definitions and reproducibility (2021)",
+      "url": "https://www.mdpi.com/2077-0383/10/22/5303"
+    },
+    {
+      "title": "3D cephalometric protocol and Gn midpoint definition (2019)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6525456/"
+    },
+    {
+      "title": "Cephalometric landmark identification in 2D and 3D (2009)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2753840/"
+    },
+    {
+      "title": "Palatine bones and posterior nasal spine · University of Baghdad",
+      "url": "https://codental.uobaghdad.edu.iq/wp-content/uploads/sites/14/2020/05/lec-5-first-year.pdf"
+    }
+  ],
+  "landmarks": [
+    {
+      "id": "S",
+      "name": "Sella",
+      "definition": "Centre of the sella turcica (pituitary fossa) in the sphenoid bone.",
+      "note": "An estimated centre within the fossa, not a point on its bony floor. The marker is visible through the skull.",
+      "points": [
+        {
+          "code": "S",
+          "parts": [
+            "skull:sphenoid_bone"
+          ],
+          "position": [
+            -0.7,
+            -118.5,
+            1533.5
+          ],
+          "kind": "constructed",
+          "evidence": {
+            "status": "approximate-construction",
+            "method": "Visual estimate of the fossa centre between its anterior and posterior walls; no surface snapping."
+          }
+        }
+      ]
+    },
+    {
+      "id": "N",
+      "name": "Nasion",
+      "definition": "Midline junction of the frontal and nasal bones at the frontonasal suture.",
+      "note": "Look at the root of the nose. This is a bony landmark, not the soft-tissue depression.",
+      "points": [
+        {
+          "code": "N",
+          "parts": [
+            "skull:nasal_bone_left",
+            "skull:frontal_bone",
+            "skull:nasal_bone_right"
+          ],
+          "position": [
+            -0.8370680212974548,
+            -178.86000061035156,
+            1539.8800048828125
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/nasal_bone_left.glb",
+            "vertexIndex": 206,
+            "meshSha256": "1124bd7c835ae55b341cefd05fb20e4230b211a910dc13eb7f252a314243d6a5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Or",
+      "name": "Orbitale",
+      "definition": "Lowest point on the inferior bony margin of each orbit.",
+      "note": "Use the orbital rim, not the infraorbital foramen below it. Left and right are separate points.",
+      "points": [
+        {
+          "code": "Or-L",
+          "parts": [
+            "skull:maxilla_left"
+          ],
+          "position": [
+            28.295400619506836,
+            -165.2530059814453,
+            1508.5699462890625
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/maxilla_left.glb",
+            "vertexIndex": 5631,
+            "meshSha256": "fbeaac80003e22b89edc8824f64f200f4d306a413da30c41dbf2d3a932cb7ed9"
+          },
+          "side": "left"
+        },
+        {
+          "code": "Or-R",
+          "parts": [
+            "skull:maxilla_right"
+          ],
+          "position": [
+            -28.364999771118164,
+            -166.83900451660156,
+            1508.1300048828125
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/maxilla_right.glb",
+            "vertexIndex": 676,
+            "meshSha256": "4e0ae864d4a7e5ef9bb5364a14c4109cbe1ca8954c78dc4c6ed11ed49ab54bf1"
+          },
+          "side": "right"
+        }
+      ]
+    },
+    {
+      "id": "Po",
+      "name": "Porion",
+      "definition": "Uppermost point on the external bony margin of the external auditory meatus.",
+      "note": "Identify the ear-canal roof in the temporal bone. This is anatomical porion, not an ear-rod reference.",
+      "points": [
+        {
+          "code": "Po-L",
+          "parts": [
+            "skull:temporal_bone_left"
+          ],
+          "position": [
+            55.78730010986328,
+            -97.51499938964844,
+            1519.8800048828125
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/temporal_bone_left.glb",
+            "vertexIndex": 4024,
+            "meshSha256": "f8057520b5b9a0f98f80b0d5f2a4feefcb22f0acf8d61838592d093222becc8d"
+          },
+          "side": "left"
+        },
+        {
+          "code": "Po-R",
+          "parts": [
+            "skull:temporal_bone_right"
+          ],
+          "position": [
+            -55.48740005493164,
+            -98.90380096435547,
+            1518.4100341796875
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/temporal_bone_right.glb",
+            "vertexIndex": 1291,
+            "meshSha256": "ade2caa36728576d82b43837aa89a130c592c34f832a1ce796a1e4129c836a7d"
+          },
+          "side": "right"
+        }
+      ]
+    },
+    {
+      "id": "ANS",
+      "name": "Anterior nasal spine",
+      "definition": "Tip of the anterior nasal spine at the lower border of the nasal aperture.",
+      "note": "The two maxillae contribute to this midline projection. Follow the nasal floor forwards to its tip.",
+      "points": [
+        {
+          "code": "ANS",
+          "parts": [
+            "skull:maxilla_left",
+            "skull:maxilla_right"
+          ],
+          "position": [
+            -0.4876309931278229,
+            -183.66700744628906,
+            1489.8800048828125
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/maxilla_left.glb",
+            "vertexIndex": 207,
+            "meshSha256": "fbeaac80003e22b89edc8824f64f200f4d306a413da30c41dbf2d3a932cb7ed9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PNS",
+      "name": "Posterior nasal spine",
+      "definition": "Posterior midline tip of the bony hard palate.",
+      "note": "The posterior nasal spine is formed by the horizontal plates of the palatine bones. It is not a posterior process of the maxilla.",
+      "points": [
+        {
+          "code": "PNS",
+          "parts": [
+            "skull:palatine_bone_left",
+            "skull:palatine_bone_right"
+          ],
+          "position": [
+            -0.8669949769973755,
+            -135.0760040283203,
+            1487.6700439453125
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/palatine_bone_left.glb",
+            "vertexIndex": 256,
+            "meshSha256": "cf3201324a1a309aba5666e9db2853e2080b8a9679cb6a881436cd4e6a3610d6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Go",
+      "name": "Gonion",
+      "definition": "Posteroinferior region of the mandibular angle where the ramus meets the body.",
+      "note": "These marks localize the left and right bony angles. Some 2D analyses construct Go with tangents and an angle bisector; that construction is not performed here.",
+      "points": [
+        {
+          "code": "Go-L",
+          "parts": [
+            "skull:mandible"
+          ],
+          "position": [
+            37.766300201416016,
+            -110.4540023803711,
+            1466.22998046875
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/mandible.glb",
+            "vertexIndex": 9652,
+            "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3"
+          },
+          "side": "left"
+        },
+        {
+          "code": "Go-R",
+          "parts": [
+            "skull:mandible"
+          ],
+          "position": [
+            -39.051700592041016,
+            -110.4540023803711,
+            1465.9200439453125
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/mandible.glb",
+            "vertexIndex": 1464,
+            "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3"
+          },
+          "side": "right"
+        }
+      ]
+    },
+    {
+      "id": "Me",
+      "name": "Menton",
+      "definition": "Lowest point of the mandibular symphysis in the midline.",
+      "note": "Find the inferior edge of the bony chin. Menton describes the lowest point, rather than the most forward point.",
+      "points": [
+        {
+          "code": "Me",
+          "parts": [
+            "skull:mandible"
+          ],
+          "position": [
+            -0.49150699377059937,
+            -172.2469940185547,
+            1436.469970703125
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/mandible.glb",
+            "vertexIndex": 5469,
+            "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Pog",
+      "name": "Pogonion",
+      "definition": "Most anterior point on the bony chin at the mandibular symphysis.",
+      "note": "Follow the anterior chin contour below point B. Do not confuse it with the incisor-bearing alveolar process.",
+      "points": [
+        {
+          "code": "Pog",
+          "parts": [
+            "skull:mandible"
+          ],
+          "position": [
+            -0.8035969734191895,
+            -177.51100158691406,
+            1442.8299560546875
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/mandible.glb",
+            "vertexIndex": 5092,
+            "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Gn",
+      "name": "Gnathion",
+      "definition": "Constructed midpoint between Menton and Pogonion, following your reference.",
+      "note": "The marker uses the arithmetic midpoint of this model’s Me and Pog coordinates. Other analyses use a contour or tangent-based definition; this midpoint need not lie on the bone surface.",
+      "points": [
+        {
+          "code": "Gn",
+          "parts": [
+            "skull:mandible"
+          ],
+          "position": [
+            -0.6475519835948944,
+            -174.87899780273438,
+            1439.6499633789062
+          ],
+          "kind": "constructed",
+          "evidence": {
+            "status": "approximate-construction",
+            "method": "Arithmetic midpoint of Me and Pog.",
+            "derivedFrom": [
+              "Me",
+              "Pog"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A",
+      "name": "Point A · Subspinale",
+      "definition": "Deepest point of the anterior maxillary concavity between ANS and the alveolar crest.",
+      "note": "Trace the midline bony profile below the anterior nasal spine and above the upper incisor sockets.",
+      "points": [
+        {
+          "code": "A",
+          "parts": [
+            "skull:maxilla_left",
+            "skull:maxilla_right"
+          ],
+          "position": [
+            -0.729013979434967,
+            -182.6840057373047,
+            1483.3299560546875
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/maxilla_left.glb",
+            "vertexIndex": 256,
+            "meshSha256": "fbeaac80003e22b89edc8824f64f200f4d306a413da30c41dbf2d3a932cb7ed9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Point B · Supramentale",
+      "definition": "Deepest point of the anterior mandibular concavity between the alveolar crest and Pogonion.",
+      "note": "Trace the midline contour below the lower incisor sockets and above the prominence of the chin.",
+      "points": [
+        {
+          "code": "B",
+          "parts": [
+            "skull:mandible"
+          ],
+          "position": [
+            -0.49150699377059937,
+            -176.0240020751953,
+            1450.010009765625
+          ],
+          "kind": "surface",
+          "evidence": {
+            "status": "visual-localization",
+            "mesh": "meshes/skull/mandible.glb",
+            "vertexIndex": 5203,
+            "meshSha256": "b96c8d11f30090179e6f5f9f81fe0196c15bd7fa9e167eeca1a9edc88b80d0b3"
+          }
+        }
+      ]
+    }
+  ]
+}

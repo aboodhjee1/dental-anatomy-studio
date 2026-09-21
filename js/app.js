@@ -1,4 +1,5 @@
 import { isDentalStructure } from './dentistry.js';
+import { visibleCephalometricPoints, showCephalometricPoints, cephalometryPanel, cephalometryDetail, cephalometryMenu } from './cephalometry.js';
 import { StructureMenu } from './structure-menu.js';
 import { Viewer } from './viewer.js?v=0.5.2';
 import { openingDiagram, openingSummary } from './salivary.js';
@@ -7,6 +8,8 @@ import { loadLayerRegistry, loadLayerContent, meshUrl } from './loader.js?v=0.5.
 const $ = id => document.getElementById(id);
 const parts = new Map(), layers = new Map(), rows = new Map();
 let structureMenu;
+let cephalometry, cephalometryActive = false, cephSide = 'right', selectedCeph = 'S';
+const enabledCeph = new Set();
 let dentistryOnly = false;
 const inScope = id => !dentistryOnly || isDentalStructure(id);
 function setScope(dental) {
@@ -68,6 +71,9 @@ function sync() {
   $('selection-chip').hidden = !selectedId;
   $('restore-context').hidden = !viewer.soloId;
   $('undo-hide').hidden = !hiddenHistory.length;
+  $('sagittal-view').setAttribute('aria-pressed', String(!!viewer.sagittalCut));
+  $('sagittal-note').hidden = !viewer.sagittalCut;
+  $('explode-slider').disabled = cephalometryActive || viewer.sagittalCut;
   if (selectedId) $('selection-name').textContent = parts.get(selectedId).displayName;
   document.querySelectorAll('[data-preset]').forEach(button => button.setAttribute('aria-pressed', button.dataset.preset === activePreset));
   updateAnnotations();
@@ -75,6 +81,14 @@ function sync() {
 
 function updateAnnotations() {
   $('labels-toggle').disabled = false;
+  if (cephalometryActive) {
+    const visible = visibleCephalometricPoints(cephalometry, cephSide, viewer.parts, enabledCeph);
+    showCephalometricPoints(viewer, visible, selectedCeph, selectCephalometricMark);
+    $('ceph-count').textContent = `${visible.length} / 12 shown`;
+    document.querySelectorAll('[data-ceph-toggle]').forEach(input => { input.checked = enabledCeph.has(input.dataset.cephToggle); });
+    updateCephalometricDetail(visible);
+    return;
+  }
   if (!$('labels-toggle').checked) { viewer.clearAnnotations(); $('labels-status').textContent = 'Names + available landmarks'; return; }
   const ids = selectedId ? [selectedId] : [...parts.keys()].filter(id => viewer.parts.get(id).object3D.visible &&
     (activePreset !== 'salivary' || parts.get(id).layerId === 'salivary'));
@@ -93,6 +107,22 @@ function updateAnnotations() {
   }
   viewer.showAnnotationSet(entries);
   $('labels-status').textContent = landmarks ? `${landmarks} study landmarks · visual placement` : ids.length > 14 ? `14 of ${ids.length} names · select to focus` : 'Structure names · select for landmarks';
+}
+
+function selectCephalometricMark(id) {
+  if (!cephalometry.landmarks.some(mark => mark.id === id)) return;
+  const labelFocus = document.activeElement?.classList.contains('ceph-label') ? document.activeElement.getAttribute('aria-label') : null;
+  selectedCeph = id;
+  updateAnnotations();
+  if (labelFocus) [...document.querySelectorAll('.ceph-label')].find(element => element.getAttribute('aria-label') === labelFocus)?.focus({ preventScroll: true });
+}
+
+function updateCephalometricDetail(points) {
+  const detail = $('ceph-detail');
+  if (!detail) return;
+  const mark = cephalometry.landmarks.find(mark => mark.id === selectedCeph);
+  detail.innerHTML = cephalometryDetail(mark, points.some(point => point.landmarkId === selectedCeph));
+  document.querySelectorAll('[data-ceph-id]').forEach(button => button.setAttribute('aria-pressed', button.dataset.cephId === selectedCeph));
 }
 
 function showDuctDiagram(family = 'parotid') {
@@ -130,6 +160,7 @@ function selectPart(id, solo = false, revealNotes = false) {
   structureMenu?.close();
   if (!id) { clearSelection(); return; }
   if (!parts.has(id) || !inScope(id)) return;
+  if (cephalometryActive) applyPreset('bones');
   viewer.restoreAllParts();
   if (!viewer.parts.get(id).visible) activePreset = null;
   viewer.setPartVisibility(id, true);
@@ -156,6 +187,13 @@ function clearSelection() {
 }
 
 function renderPanel() {
+  if (cephalometryActive) {
+    $('panel-badge').className = 'badge';
+    $('panel-badge').textContent = 'Cephalometry';
+    $('panel-content').innerHTML = cephalometryPanel(cephalometry);
+    updateCephalometricDetail(visibleCephalometricPoints(cephalometry, cephSide, viewer.parts, enabledCeph));
+    return;
+  }
   if (!selectedId) {
     $('panel-badge').className = 'badge';
     $('panel-badge').textContent = 'Start exploring';
@@ -242,37 +280,63 @@ function applyPreset(name) {
   structureMenu?.close();
   hiddenHistory.length = 0;
   activePreset = name;
+  viewer.setSagittalCut(false);
+  cephalometryActive = name === 'cephalometry';
+  document.body.classList.toggle('cephalometry-mode', cephalometryActive);
+  document.querySelector('.interaction-hint').textContent = cephalometryActive
+    ? 'Select a label · Drag to rotate · Scroll to zoom'
+    : 'Hover for Hide / Show only · Drag to rotate · Scroll to zoom';
+  $('ceph-menu').hidden = !cephalometryActive;
+  $('ceph-controls').hidden = !cephalometryActive;
+  $('explode-slider').disabled = cephalometryActive;
+  $('explode-slider').title = cephalometryActive ? 'Cephalometric marks use the assembled skull.' : '';
+  if (cephalometryActive) {
+    dentistryOnly = false;
+    document.querySelectorAll('[data-scope]').forEach(button => button.setAttribute('aria-pressed', button.dataset.scope === 'all'));
+    $('dentistry-scope-note').hidden = true;
+    $('labels-toggle').checked = true;
+    cephSide = 'right';
+    selectedCeph = 'S';
+    enabledCeph.clear();
+    cephalometry.landmarks.forEach(mark => enabledCeph.add(mark.id));
+  }
+  document.querySelectorAll('[data-ceph-side]').forEach(button => button.setAttribute('aria-pressed', button.dataset.cephSide === cephSide));
   if (name === 'salivary') $('labels-toggle').checked = true;
   selectedId = null;
   viewer.restoreAllParts();
   viewer.clearIsolation();
   viewer.clearAnnotations();
   for (const layer of layers.values()) {
-    const settings = layer.presets?.[name] || { visible: layer.enabledByDefault, opacity: 1 };
+    const settings = cephalometryActive ? { visible: layer.id === 'skull', opacity: layer.id === 'skull' ? 0.45 : 1 }
+      : layer.presets?.[name] || { visible: layer.enabledByDefault, opacity: 1 };
     layer.ids.forEach(id => viewer.setPartVisibility(id, settings.visible && inScope(id)));
     viewer.setLayerOpacity(layer.id, settings.opacity);
   }
   viewer.setExplodeAmount(0, false);
   $('explode-slider').value = 0;
   $('explode-value').textContent = '0%';
-  $('scene-title').textContent = ({ bones: 'Explore the skull', nerves: 'Follow the dental nerves', all: 'See the connections', salivary: 'Salivary glands & openings' })[name];
+  $('scene-title').textContent = ({ bones: 'Explore the skull', cephalometry: 'Cephalometric landmarks', nerves: 'Follow the dental nerves', all: 'See the connections', salivary: 'Salivary glands & openings' })[name];
   $('structure-search').value = '';
-  setFilter(name === 'salivary' ? 'salivary' : name === 'nerves' ? 'nerves' : name === 'bones' ? 'skull' : 'all');
-  viewer.setView('front');
+  setFilter(name === 'salivary' ? 'salivary' : name === 'nerves' ? 'nerves' : (name === 'bones' || cephalometryActive) ? 'skull' : 'all');
+  viewer.setView(cephalometryActive ? 'right' : 'front');
   if (name === 'salivary') viewer.fit(new Set(layers.get('salivary').ids));
-  markCamera('front');
+  markCamera(cephalometryActive ? 'right' : 'front');
   renderPanel();
   sync();
 }
 
 async function init() {
   const registry = await loadLayerRegistry();
+  const cephResponse = await fetch('data/cephalometry.json');
+  if (!cephResponse.ok) throw new Error('Cephalometric landmark data could not be loaded.');
+  cephalometry = await cephResponse.json();
+  $('ceph-menu').innerHTML = cephalometryMenu(cephalometry);
   viewer = new Viewer($('viewer-container'), {
     rotation: registry.scene?.rotation,
-    onPartClick: id => { if (ready) selectPart(id); },
-    onPartContext: (id, event) => { if (ready) structureMenu.show(id, event, { force: true }); },
+    onPartClick: id => { if (ready && !cephalometryActive) selectPart(id); },
+    onPartContext: (id, event) => { if (ready && !cephalometryActive) structureMenu.show(id, event, { force: true }); },
     onPartHover: (id, event) => {
-      if (!ready) return;
+      if (!ready || cephalometryActive) return;
       rows.forEach((row, partId) => row.classList.toggle('hovered', partId === id));
       structureMenu.show(id, event);
     },
@@ -317,6 +381,45 @@ async function init() {
   document.querySelectorAll('.layer-card input').forEach(input => { input.disabled = false; });
   applyPreset('bones');
   document.querySelectorAll('[data-preset]').forEach(button => button.addEventListener('click', () => applyPreset(button.dataset.preset)));
+  $('ceph-menu').addEventListener('click', event => {
+    const button = event.target.closest('[data-ceph-id]');
+    if (button && cephalometryActive) selectCephalometricMark(button.dataset.cephId);
+    const bulk = event.target.closest('[data-ceph-visibility]');
+    if (bulk) {
+      enabledCeph.clear();
+      if (bulk.dataset.cephVisibility === 'show') cephalometry.landmarks.forEach(mark => enabledCeph.add(mark.id));
+      updateAnnotations();
+    }
+  });
+  $('ceph-menu').addEventListener('change', event => {
+    const id = event.target.dataset.cephToggle;
+    if (!id) return;
+    if (event.target.checked) enabledCeph.add(id); else enabledCeph.delete(id);
+    updateAnnotations();
+  });
+  $('ceph-menu-button').addEventListener('click', () => {
+    $('ceph-menu').scrollIntoView({ behavior: 'instant', block: 'start' });
+    $('ceph-menu').querySelector('button').focus({ preventScroll: true });
+  });
+  document.querySelectorAll('[data-ceph-side]').forEach(button => button.addEventListener('click', () => {
+    cephSide = button.dataset.cephSide;
+    document.querySelectorAll('[data-ceph-side]').forEach(item => item.setAttribute('aria-pressed', item.dataset.cephSide === cephSide));
+    if (cephSide === 'left') viewer.setSagittalCut(false);
+    viewer.setView(cephSide); markCamera(cephSide); sync();
+  }));
+  $('sagittal-view').addEventListener('click', () => {
+    viewer.setExplodeAmount(0, false);
+    $('explode-slider').value = 0;
+    $('explode-value').textContent = '0%';
+    viewer.setSagittalCut(!viewer.sagittalCut);
+    if (viewer.sagittalCut) {
+      cephSide = 'right';
+      document.querySelectorAll('[data-ceph-side]').forEach(button => button.setAttribute('aria-pressed', button.dataset.cephSide === 'right'));
+      // Look from the removed (left) half toward the medial face of the right half.
+      viewer.setView('left'); markCamera('left');
+    } else { viewer.setView('right'); markCamera('right'); }
+    sync();
+  });
   document.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => { viewer.setView(button.dataset.view); markCamera(button.dataset.view); }));
   document.querySelectorAll('[data-scope]').forEach(button => button.addEventListener('click', () => setScope(button.dataset.scope === 'dental')));
   $('reset-view').addEventListener('click', () => { $('labels-toggle').checked = false; applyPreset('bones'); });
@@ -351,7 +454,10 @@ async function init() {
   document.addEventListener('keydown', event => {
     if ($('help-dialog').open || $('duct-dialog').open) return;
     if (event.key === 'Escape') clearSelection();
-    if (event.key === '/' && !event.ctrlKey && !event.metaKey && !/INPUT|TEXTAREA/.test(event.target.tagName)) { event.preventDefault(); $('structure-search').focus(); }
+    if (event.key === '/' && !event.ctrlKey && !event.metaKey && !/INPUT|TEXTAREA/.test(event.target.tagName)) {
+      event.preventDefault();
+      if (cephalometryActive) $('ceph-menu-button').click(); else $('structure-search').focus();
+    }
   });
   ready = true;
 }

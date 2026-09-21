@@ -1,8 +1,39 @@
-# Dental Anatomy Studio — v0.4
+# Dental Anatomy Studio — v0.6
 
 A local, interactive 3D atlas for dental anatomy study: 22 skull bones, 8 muscles,
 26 sourced nerve structures (13 nerve families, left and right), six salivary
 glands, and two upper second molars (64 selectable meshes).
+
+## Cephalometric marks (0.6)
+
+Choose **Cephalometric marks** to show S, N, Or, Po, ANS, PNS, Go, Me, Pog,
+Gn, A and B. The dedicated landmark menu has individual checkboxes and
+**Show all marks / Hide all marks**. Select a name or its model label for notes.
+On small screens, **Landmark menu** jumps to the controls below the viewer.
+Labels occupy one spaced column on the right, including closely grouped chin
+points. **Right only / Left only** chooses one set of paired landmarks and a
+lateral camera view. The full skull is present; soft-tissue layers are hidden.
+**Sagittal view** removes the anatomical left half with a clipping plane and
+looks into the retained right half. It also sections unpaired midline bones.
+Press it again to restore the full skull. This is a visual cut of the existing
+surfaces, not a newly generated or capped sectional mesh. Removed surfaces
+cannot intercept clicks. Bone separation is unavailable while this cut or
+cephalometric mode is active. Other study presets restore ordinary exploration.
+
+Positions are approximate visual localizations on this exact atlas, not
+expert-validated clinical measurements. Dots and leader lines are drawn through
+bone so internal points remain visible. S is an estimated centre of the sella;
+Gn is the arithmetic Me/Pog midpoint used in the supplied reference, not a
+snapped surface point. Go localizes the bony angle rather than constructing a
+2D tangent bisector. This perspective model is not a calibrated cephalogram.
+PNS is assigned to the palatine bones, correcting the reference's maxillary
+attribution. Definitions and source links are available in the study panel.
+
+`data/cephalometry.json` records coordinates, source mesh hashes and surface
+vertex indices, with explicit construction methods for S/Gn.
+`python scripts/build_cephalometry.py` reproduces the records; it does not
+automatically detect landmarks. Tests verify vertex identity, midpoint
+construction, unilateral labels, sagittal clipping, picking, label spacing and cleanup.
 
 ## Run locally
 

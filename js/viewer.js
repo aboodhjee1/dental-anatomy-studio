@@ -15,6 +15,7 @@ export class Viewer {
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(38, 1, 0.1, 10000);
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    this.renderer.localClippingEnabled = true;
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.renderer.domElement.setAttribute('aria-label', 'Interactive anatomy model. Use the structure list for keyboard selection.');
@@ -90,7 +91,8 @@ export class Viewer {
       for (let node = mesh; node; node = node.parent) if (!node.visible) { visible = false; break; }
       if (visible) meshes.push(mesh);
     }
-    const hits = this.raycaster.intersectObjects(meshes, false);
+    const hits = this.raycaster.intersectObjects(meshes, false).filter(hit =>
+      !this.sagittalCut || this.sagittalPlane.distanceToPoint(hit.point) >= 0);
     const hit = hits.find(item => (this.layerOpacity.get(this.parts.get(item.object.userData.partId).layerId) ?? 1) >= 0.35) || hits[0];
     const id = hit?.object.userData.partId || null;
     dom.style.cursor = id ? 'pointer' : 'grab';
@@ -186,6 +188,21 @@ export class Viewer {
       if (part.explode) part.object3D.position.addScaledVector(part.explodeOffset, this.explodeAmount);
     }
     if (reframe) this.fit();
+  }
+
+  setSagittalCut(enabled) {
+    this.sagittalCut = enabled;
+    // Atlas +X is anatomical left. Keep x <= -0.7 mm, the approximate
+    // midsagittal plane of this atlas, transformed with the skull assembly.
+    this.contentGroup.updateWorldMatrix(true, true);
+    this.sagittalPlane = new THREE.Plane(new THREE.Vector3(-1, 0, 0), -0.7)
+      .applyMatrix4(this.contentGroup.matrixWorld);
+    for (const part of this.parts.values()) for (const { material } of part.materials) {
+      material.clippingPlanes = enabled ? [this.sagittalPlane] : [];
+      material.clipShadows = enabled;
+      material.side = enabled ? THREE.DoubleSide : THREE.FrontSide;
+      material.needsUpdate = true;
+    }
   }
 
   setPartVisibility(id, visible) {
@@ -312,11 +329,13 @@ export class Viewer {
       let visible = true;
       for (let node = item.group; node; node = node.parent) if (!node.visible) visible = false;
       if (!visible) continue;
-      const projected = item.group.localToWorld(item.anchor.clone()).project(this.camera);
-      const onScreen = projected.z >= -1 && projected.z <= 1 && Math.abs(projected.x) <= 1 && Math.abs(projected.y) <= 1;
+      const worldAnchor = item.group.localToWorld(item.anchor.clone());
+      const onRetainedSide = !this.sagittalCut || this.sagittalPlane.distanceToPoint(worldAnchor) >= -2;
+      const projected = worldAnchor.project(this.camera);
+      const onScreen = onRetainedSide && projected.z >= -1 && projected.z <= 1 && Math.abs(projected.x) <= 1 && Math.abs(projected.y) <= 1;
       item.label.visible = item.line.visible = onScreen;
       if (!onScreen) continue;
-      columns[projected.x < 0 ? 0 : 1].push({ ...item, projected, y: (1 - projected.y) * height / 2 });
+      columns[item.column === 'right' ? 1 : projected.x < 0 ? 0 : 1].push({ ...item, projected, y: (1 - projected.y) * height / 2 });
     }
     for (let side = 0; side < 2; side++) {
       const items = columns[side].sort((a, b) => a.y - b.y);
@@ -331,12 +350,14 @@ export class Viewer {
       // Center collision spacing around the anchors instead of pinning labels
       // to viewport edges. The label-to-anchor gap stays small at every zoom.
       const shift = items.length ? items.reduce((sum, item) => sum + item.y - item.anchorY, 0) / items.length : 0;
-      for (const item of items) {
+      for (const [index, item] of items.entries()) {
         const labelWidth = item.element.offsetWidth || 130;
         const anchorX = (item.projected.x + 1) * width / 2;
         const preferredX = anchorX + (side === 0 ? -1 : 1) * (labelWidth / 2 + 14);
-        const x = THREE.MathUtils.clamp(preferredX, labelWidth / 2 + 8, width - labelWidth / 2 - 8);
-        const y = THREE.MathUtils.clamp(item.y - shift, 8 + item.labelHeight / 2, height - 8 - item.labelHeight / 2);
+        const x = item.column === 'right' ? width - 36 : THREE.MathUtils.clamp(preferredX, labelWidth / 2 + 8, width - labelWidth / 2 - 8);
+        const y = item.column === 'right'
+          ? (items.length === 1 ? height / 2 : 24 + index * (height - 48) / (items.length - 1))
+          : THREE.MathUtils.clamp(item.y - shift, 8 + item.labelHeight / 2, height - 8 - item.labelHeight / 2);
         const end = new THREE.Vector3(x / width * 2 - 1, 1 - y / height * 2, item.projected.z).unproject(this.camera);
         item.group.worldToLocal(end);
         item.label.position.copy(end);
