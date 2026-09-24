@@ -39,6 +39,7 @@ dialog{max-width:530px;width:calc(100% - 28px);border:1px solid var(--line);bord
 .view-toolbar{flex-wrap:wrap}#sagittal-view[aria-pressed=true]{background:var(--teal);color:white}#sagittal-note{text-align:center;line-height:1.5;margin:7px auto;max-width:420px}
 .ceph-sides{display:flex;align-items:center;justify-content:center;gap:5px;font-size:11px;flex-wrap:wrap}.ceph-sides span{color:var(--muted);margin-right:7px}.ceph-sides button{padding:7px 12px;border:1px solid var(--line);border-radius:6px;background:white}.ceph-sides button[aria-pressed=true]{background:var(--teal);color:white}
 #ceph-controls .model-note{line-height:1.5;text-align:center;margin:7px auto 10px;max-width:420px}
+.ceph-skull-opacity{display:block;max-width:260px;margin:10px auto 0;font-size:10px;color:var(--ink)}.ceph-skull-opacity output{float:right;color:var(--muted)}.ceph-skull-opacity input{display:block;width:100%;margin-top:6px}
 .ceph-list{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:18px 0}.ceph-list button{display:flex;align-items:center;gap:8px;text-align:left;padding:9px 7px;border:1px solid var(--line);border-radius:7px;background:white;font-size:10px;line-height:1.35}.ceph-list b{font-size:13px;color:var(--teal);min-width:27px}.ceph-list button[aria-pressed=true]{background:#e9f2eb;border-color:#4d8b79}.ceph-list button:hover{border-color:#4d8b79}
 .ceph-detail{border-top:1px solid var(--line);padding-top:17px}.ceph-detail h3{font-size:17px;margin:8px 0 10px}.ceph-detail p{font-size:12px;line-height:1.75}.ceph-tip{color:var(--muted)}.ceph-hidden{color:#975117}.ceph-references{font-size:11px;margin-top:18px;line-height:1.65}.ceph-references summary{cursor:pointer;color:var(--teal)}
 @media(max-width:620px){.ceph-list button{font-size:12px;padding:12px 9px}.ceph-label{min-width:28px;min-height:28px}.ceph-sides{font-size:10px}#ceph-controls .model-note{font-size:9px}#workspace:has(#ceph-controls:not([hidden])){min-height:780px}}
@@ -51,3 +52,14 @@ dialog{max-width:530px;width:calc(100% - 28px);border:1px solid var(--line);bord
   #sidebar .structure-browser { flex:none; min-height:0; max-height:none; }
   #sidebar #part-list { flex:none; overflow:visible; max-height:none; }
 }
+
+/* Cephalometric sheets share the existing landmark study workspace. */
+.planes-section{padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.plane-list small{display:block;margin-top:3px;font-size:9px;color:var(--muted)}
+.plane-list b{color:var(--plane-color);border-left:3px solid var(--plane-color);padding-left:6px;min-width:45px!important}
+.plane-list button[aria-pressed=true]{border-color:var(--plane-color);background:#f4f7f4}
+.plane-slider{display:block;font-size:11px;line-height:1.6;margin:17px 0;color:var(--ink)}
+.plane-slider output{float:right;color:var(--muted)}
+.plane-slider input{display:block;width:100%;margin-top:10px}
+.fop-settings{font-size:11px;line-height:1.6;margin-top:16px}.fop-settings summary{cursor:pointer;color:var(--teal)}
+.plane-route{font-weight:600}.plane-route small{font-weight:400;color:var(--muted)}

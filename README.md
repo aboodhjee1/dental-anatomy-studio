@@ -1,4 +1,32 @@
-# Dental Anatomy Studio — v0.6
+# Dental Anatomy Studio — v0.7
+
+## Cephalometric planes (0.7)
+
+Choose **Cephalometric planes** for transparent sheets across the full skull:
+SN (S–N), Frankfort (Po–Or), maxillary (PNS–ANS), mandibular (Go–Me), and an
+explicitly illustrative functional occlusal plane (FOP). The view starts at an
+oblique angle so the sheet widths are visible. **3D view** restores that angle;
+**Right / Left** shows the lateral reference lines.
+
+Use individual checkboxes, **Show all planes / Hide all planes**, **Show selected
+plane only**, and **Sheet opacity**. Selecting a plane shows its endpoint labels
+and notes. Landmark controls still work independently. **Right only / Left only**
+chooses the paired landmarks used to construct the sheets. Sagittal view clips
+the bones while retaining reference sheets biased wider on the anatomical right. Other presets clear them.
+
+The first four sheets contain the stored landmark pair and extend parallel to
+the atlas left/right axis, with 18 mm extensions beyond the pair and an asymmetric 123 mm
+display width (95 mm anatomical right, 28 mm anatomical left). They preserve the lateral reference slope; they are not horizontal
+anatomical cuts or fitted planes through all bilateral landmarks. Their outer
+edges are display boundaries, not anatomical endpoints. Existing landmark
+placement limitations still apply.
+
+The atlas has no recorded functional molar/premolar cusp landmarks. FOP is an
+adjustable illustration, initially parallel to the PNS–ANS reference and 14 mm
+inferior to it. **Adjust illustrative FOP** changes its height and tilt; **Reset
+FOP guide** restores that starting guide. Its dashed line and FOP-P/FOP-A markers
+are illustration guides, not measured cusp points. It must not be used as a
+measured occlusal plane.
 
 A local, interactive 3D atlas for dental anatomy study: 22 skull bones, 8 muscles,
 26 sourced nerve structures (13 nerve families, left and right), six salivary
@@ -10,8 +38,8 @@ Choose **Cephalometric marks** to show S, N, Or, Po, ANS, PNS, Go, Me, Pog,
 Gn, A and B. The dedicated landmark menu has individual checkboxes and
 **Show all marks / Hide all marks**. Select a name or its model label for notes.
 On small screens, **Landmark menu** jumps to the controls below the viewer.
-Labels occupy one spaced column on the right, including closely grouped chin
-points. **Right only / Left only** chooses one set of paired landmarks and a
+Labels float beside their projected landmarks, with collision spacing for closely
+grouped chin points. **Right only / Left only** chooses one set of paired landmarks and a
 lateral camera view. The full skull is present; soft-tissue layers are hidden.
 **Sagittal view** removes the anatomical left half with a clipping plane and
 looks into the retained right half. It also sections unpaired midline bones.

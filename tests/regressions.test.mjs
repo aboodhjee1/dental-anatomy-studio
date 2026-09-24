@@ -332,7 +332,7 @@ test('Labels follow projected anchors at different zooms rather than viewport ed
       const item = viewer.annotationItems[0];
       const a = item.group.localToWorld(item.anchor.clone()).project(viewer.camera);
       const b = item.group.localToWorld(item.label.position.clone()).project(viewer.camera);
-      assert.ok(Math.abs((b.x-a.x)*400 - 74) < .001);
+      assert.ok(Math.abs((b.x-a.x)*400 - 84) < .001);
       assert.ok(Math.abs(b.y-a.y) < .001);
     }
   } finally {globalThis.document=previous;}

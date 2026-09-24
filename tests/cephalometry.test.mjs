@@ -84,7 +84,7 @@ test('Removed half is not selectable by raycasting', () => {
   }
 });
 
-test('Twelve crowded marks occupy one non-overlapping column after resize and zoom; cleanup frees dots and lines', () => {
+test('Twelve crowded marks float near their anchors without overlap after resize and zoom; cleanup frees dots and lines', () => {
   const previous = globalThis.document;
   globalThis.document = { createElement: () => ({ style: {}, dataset: {}, offsetWidth:36, offsetHeight:28, setAttribute() {}, addEventListener() {}, remove() {} }) };
   try {
@@ -105,7 +105,7 @@ test('Twelve crowded marks occupy one non-overlapping column after resize and zo
         return { x:(p.x + 1)*width/2, y:(1-p.y)*height/2 };
       }).sort((a,b) => a.y-b.y);
       centers.forEach((p,i) => {
-        assert.ok(Math.abs(p.x - (width-36)) < 0.001);
+        assert.ok(Math.abs(p.x - (width/2 + 42)) < 0.001);
         assert.ok(p.y >= 14 && p.y <= height-14);
         if (i) assert.ok(p.y-centers[i-1].y >= 28 + 5);
       });

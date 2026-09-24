@@ -175,7 +175,7 @@ export class Viewer {
   }
 
   setView(view) {
-    const directions = { front: [0, 0, 1], right: [-1, 0, 0], left: [1, 0, 0], base: [0, -1, 0.001] };
+    const directions = { front: [0, 0, 1], right: [-1, 0, 0], left: [1, 0, 0], oblique: [-1, 0.35, 0.65], base: [0, -1, 0.001] };
     this.camera.up.set(0, 1, 0);
     this.fit(null, new THREE.Vector3(...(directions[view] || directions.front)).normalize());
   }
@@ -350,14 +350,28 @@ export class Viewer {
       // Center collision spacing around the anchors instead of pinning labels
       // to viewport edges. The label-to-anchor gap stays small at every zoom.
       const shift = items.length ? items.reduce((sum, item) => sum + item.y - item.anchorY, 0) / items.length : 0;
+      // Pack near-anchor labels as a group at viewport edges. Clamping each
+      // independently would stack the crowded chin labels on top of each other.
+      let nextTop = 8;
+      for (const item of items) {
+        item.nearY = Math.max(item.y - shift, nextTop + item.labelHeight / 2);
+        nextTop = item.nearY + item.labelHeight / 2 + 6;
+      }
+      let nextBottom = height - 8;
+      for (let i = items.length - 1; i >= 0; i--) {
+        const item = items[i];
+        item.nearY = Math.min(item.nearY, nextBottom - item.labelHeight / 2);
+        nextBottom = item.nearY - item.labelHeight / 2 - 6;
+      }
       for (const [index, item] of items.entries()) {
         const labelWidth = item.element.offsetWidth || 130;
         const anchorX = (item.projected.x + 1) * width / 2;
-        const preferredX = anchorX + (side === 0 ? -1 : 1) * (labelWidth / 2 + 14);
+        // Preserve a visible gap between the point marker and its notation.
+        const preferredX = anchorX + (side === 0 ? -1 : 1) * (labelWidth / 2 + 24);
         const x = item.column === 'right' ? width - 36 : THREE.MathUtils.clamp(preferredX, labelWidth / 2 + 8, width - labelWidth / 2 - 8);
         const y = item.column === 'right'
           ? (items.length === 1 ? height / 2 : 24 + index * (height - 48) / (items.length - 1))
-          : THREE.MathUtils.clamp(item.y - shift, 8 + item.labelHeight / 2, height - 8 - item.labelHeight / 2);
+          : item.nearY;
         const end = new THREE.Vector3(x / width * 2 - 1, 1 - y / height * 2, item.projected.z).unproject(this.camera);
         item.group.worldToLocal(end);
         item.label.position.copy(end);

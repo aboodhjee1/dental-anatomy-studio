@@ -9,7 +9,7 @@ export function visibleCephalometricPoints(catalog, side, parts, enabled = new S
     .map(point => ({ ...point, landmarkId: landmark.id, name: landmark.name })));
 }
 
-export function showCephalometricPoints(viewer, points, selectedId, onSelect) {
+export function showCephalometricPoints(viewer, points, selectedId, onSelect, { nearAnchors = true } = {}) {
   viewer.clearAnnotations();
   const group = new THREE.Group();
   viewer.contentGroup.add(group);
@@ -17,10 +17,14 @@ export function showCephalometricPoints(viewer, points, selectedId, onSelect) {
   viewer.annotationItems = [];
   for (const point of points) {
     const selected = point.landmarkId === selectedId;
-    const color = selected ? 0xb25523 : 0x156d67;
+    const color = point.color || (selected ? 0xb25523 : 0x156d67);
+    // Red dots distinguish measured/constructed anatomical points from the
+    // colored reference sheets. FOP's endpoints remain purple because they
+    // are explicitly illustrative rather than recorded cusp landmarks.
+    const dotColor = point.kind === 'illustrative' ? color : 0xd8463e;
     const anchor = new THREE.Vector3(...point.position);
-    const dot = new THREE.Mesh(new THREE.SphereGeometry(selected ? 1.35 : 0.95, 12, 8),
-      new THREE.MeshBasicMaterial({ color, depthTest: false, depthWrite: false }));
+    const dot = new THREE.Mesh(new THREE.SphereGeometry(selected ? 1.8 : 1.35, 12, 8),
+      new THREE.MeshBasicMaterial({ color: dotColor, depthTest: false, depthWrite: false }));
     dot.position.copy(anchor);
     dot.renderOrder = 8;
     group.add(dot);
@@ -31,6 +35,11 @@ export function showCephalometricPoints(viewer, points, selectedId, onSelect) {
     const element = document.createElement('button');
     element.type = 'button';
     element.className = 'anatomy-label ceph-label';
+    if (point.color) {
+      element.style.borderColor = point.color;
+      element.style.color = selected ? '#ffffff' : point.color;
+      if (selected) element.style.background = point.color;
+    }
     element.textContent = point.code;
     element.setAttribute('aria-label', `${point.code}: ${point.name}${point.side ? ` (${point.side})` : ''}`);
     element.setAttribute('aria-pressed', String(selected));
@@ -40,15 +49,15 @@ export function showCephalometricPoints(viewer, points, selectedId, onSelect) {
     const label = new CSS2DObject(element);
     label.position.copy(anchor);
     group.add(label);
-    viewer.annotationItems.push({ anchor, group, line, label, element, column: 'right' });
+    viewer.annotationItems.push({ anchor, group, line, label, element, column: nearAnchors ? 'near' : 'right' });
   }
 }
 
 const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
 export function cephalometryPanel(catalog) {
-  return `<h2 class="selected-title">Cephalometric marks</h2>
-    <p class="structure-summary">Select a name in the landmark menu or a marker on the model to study its location.</p>
+  return `<h2 class="selected-title">Marks &amp; planes</h2>
+    <p class="structure-summary">Select a plane or landmark in the menu to study where it passes. Colored sheets extend across the skull; their defining points remain visible through bone.</p>
     <section id="ceph-detail" class="ceph-detail" aria-live="polite"></section>
     <p class="schematic-notice">Approximate placements on this atlas, not expert-validated cephalometric measurements. Markers remain visible through bone. S and Gn are constructed points.</p>
     <details class="ceph-references"><summary>Definitions &amp; placement notes</summary>

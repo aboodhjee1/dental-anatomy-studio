@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#164c48">
   <title>Dental Anatomy Studio</title>
-  <link rel="stylesheet" href="css/style.css?v=0.6.0">
+  <link rel="stylesheet" href="css/style.css?v=0.7.0">
   <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
 </head>
 <body>
@@ -36,7 +36,7 @@
     <main id="workspace">
       <div class="workspace-heading"><div><span class="eyebrow">INTERACTIVE ATLAS</span><h2 id="scene-title">Explore the skull</h2></div><button id="reset-view" class="quiet-button" title="Restore the default layers, opacity, camera and selection">↺ Reset</button></div>
       <div class="preset-bar" aria-label="Study views">
-        <button data-preset="bones" aria-pressed="true">Bone study</button><button data-preset="cephalometry" aria-pressed="false">Cephalometric marks</button><button data-preset="nerves" aria-pressed="false">Dental nerves</button><button data-preset="salivary" aria-pressed="false">Salivary glands</button><button data-preset="all" aria-pressed="false">All layers</button>
+        <button data-preset="bones" aria-pressed="true">Bone study</button><button data-preset="planes" aria-pressed="false">Cephalometric planes</button><button data-preset="cephalometry" aria-pressed="false">Cephalometric marks</button><button data-preset="nerves" aria-pressed="false">Dental nerves</button><button data-preset="salivary" aria-pressed="false">Salivary glands</button><button data-preset="all" aria-pressed="false">All layers</button>
       </div>
       <div id="viewer-container">
         <div id="loading-indicator" role="status">Preparing your atlas…</div>
@@ -50,11 +50,12 @@
       </div>
       <div class="viewer-bottom">
         <div id="ceph-controls" hidden>
-          <div class="ceph-sides" aria-label="Cephalometric sides"><span>Landmark side</span><button data-ceph-side="right" aria-pressed="true">Right only</button><button data-ceph-side="left" aria-pressed="false">Left only</button><button id="ceph-menu-button" class="text-button">Landmark menu</button></div>
-          <p class="model-note">Select a mark for its definition. Approximate study placements · dots visible through bone.</p>
+          <div class="ceph-sides" aria-label="Cephalometric sides"><span>Landmark side</span><button data-ceph-side="right" aria-pressed="true">Right only</button><button data-ceph-side="left" aria-pressed="false">Left only</button><button id="ceph-menu-button" class="text-button">Planes &amp; marks menu</button></div>
+          <label class="ceph-skull-opacity" for="ceph-skull-opacity">Skull opacity <output id="ceph-skull-opacity-value">45%</output><input id="ceph-skull-opacity" type="range" min="15" max="100" value="45"></label>
+          <p class="model-note">Select a plane to trace its points. Drag to see its width; use Right or Left for its lateral line. FOP is illustrative.</p>
         </div>
-        <div class="view-toolbar" aria-label="Camera views"><button data-view="front" aria-pressed="true">Front</button><button data-view="right" aria-pressed="false">Right</button><button data-view="left" aria-pressed="false">Left</button><button data-view="base" aria-pressed="false">Base</button><button id="sagittal-view" aria-pressed="false" title="Remove the left half and look into the right half of the skull">Sagittal view</button><span></span><button id="fit-view" title="Fit all visible structures in the viewer">Fit view</button></div>
-        <p id="sagittal-note" class="model-note" role="status" hidden>Right half retained · left half hidden. Press Sagittal view again to restore the full skull.</p>
+        <div class="view-toolbar" aria-label="Camera views"><button data-view="front" aria-pressed="true">Front</button><button data-view="right" aria-pressed="false">Right</button><button data-view="left" aria-pressed="false">Left</button><button data-view="oblique" aria-pressed="false">3D view</button><button data-view="base" aria-pressed="false">Base</button><button id="sagittal-view" aria-pressed="false" title="Remove the left half and look into the right half of the skull">Sagittal view</button><span></span><button id="fit-view" title="Fit all visible structures in the viewer">Fit view</button></div>
+        <p id="sagittal-note" class="model-note" role="status" hidden>Right half retained · left half hidden. Reference sheets reach farther on the right and less on the left. Press Sagittal view again to restore the full skull.</p>
         <div class="visibility-actions"><button id="restore-context" class="quiet-button" hidden>Restore other structures</button><button id="undo-hide" class="quiet-button" hidden>Undo hide</button></div><span id="structure-action-status" class="sr-only" role="status"></span>
         <button id="duct-openings-button" class="text-button duct-shortcut">Duct openings in the mouth ↗</button><p class="interaction-hint">Hover for Hide / Show only · Drag to rotate · Scroll to zoom</p>
         <div class="explore-controls"><label for="explode-slider">Separate bones <output id="explode-value">0%</output><input id="explode-slider" type="range" min="0" max="100" value="0"></label><label class="label-toggle"><input id="labels-toggle" type="checkbox"> Structure &amp; landmark labels <small id="labels-status" role="status">Names + available landmarks</small></label></div>
@@ -81,6 +82,6 @@
     <p class="muted">Teaching diagrams, not to scale. Ducts and mucosal openings are not represented by the 3D meshes. Sublingual duct patterns vary.</p>
     <p><a href="https://www.ncbi.nlm.nih.gov/books/NBK538325/" target="_blank" rel="noopener">Salivary gland anatomy</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9640814/" target="_blank" rel="noopener">Sublingual duct variation</a> · <a href="https://www.openanatomy.org/atlas-pages/atlas-spl-head-and-neck.html" target="_blank" rel="noopener">Parotid atlas and license</a></p>
   </dialog>
-  <script type="module" src="js/app.js?v=0.6.0"></script>
+  <script type="module" src="js/app.js?v=0.7.0"></script>
 </body>
 </html>
